@@ -81,29 +81,37 @@ private func presentListOfCar(filter: Body? = nil) {
 }
 
 private func addNewCar() {
-    print("* - Обязательные поля\n")
     var manufacturer : String
     var model : String
     var body : Body
     var yearOfIssue : Int?
     var carNumber : String?
+    
+    print("* - Обязательные поля\n")
+    
     while true {
+        
         print(Interface.AddNewCar.manufacturer.rawValue)
         manufacturer = readLine() ?? ""
+        
         if manufacturer.isEmpty {
             showError(.incorrectValue)
             continue
         }
+        
         print(Interface.AddNewCar.model.rawValue)
         model = readLine() ?? ""
+        
         if model.isEmpty {
             showError(.incorrectValue)
             continue
         }
+        
         print(Interface.AddNewCar.body.rawValue)
         for (index, bodyType) in Body.allCases.enumerated() {
             print("\(index + 1). \(bodyType.rawValue)")
         }
+        
         let bodyType = readLine() ?? ""
         if let type = Body[bodyType] {
             body = type
@@ -111,17 +119,20 @@ private func addNewCar() {
             showError(.incorrectValue)
             continue
         }
+        
         print(Interface.AddNewCar.yearOfIssue.rawValue)
         let printedYearOfIssue = readLine()
         if let printedYearOfIssue = printedYearOfIssue,
            let printedYearOfIssue = Int(printedYearOfIssue) {
             yearOfIssue = printedYearOfIssue
         }
+        
         print(Interface.AddNewCar.carNumber.rawValue)
         if let printedCarNumber = readLine(),
            !printedCarNumber.isEmpty{
             carNumber = printedCarNumber
         }
+        
         listOfCars?.append(Car(manufacturer: manufacturer, model: model, body: body, yearsOfIssue: yearOfIssue, carNumber: carNumber))
         break
     }
