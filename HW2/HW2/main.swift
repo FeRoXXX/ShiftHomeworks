@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 func runApplication() {
     var array : ThreadSafetyArray<Int> = ThreadSafetyArray(arrayElements: [])
     let queue = DispatchQueue(label: "com.alexandrfedotkin.concurrentQueue", attributes: .concurrent)
@@ -16,7 +14,7 @@ func runApplication() {
     
     
     let task1 =  DispatchWorkItem {
-        for i in 0...1000 {
+        for i in 0...100 {
             array.append(i)
         }
         
@@ -24,7 +22,7 @@ func runApplication() {
     }
     
     let task2 =  DispatchWorkItem {
-        for i in 0...1000 {
+        for i in 0...100 {
             array.append(i)
         }
         
@@ -38,8 +36,17 @@ func runApplication() {
     queue.async(execute: task2)
     
     group.wait()
+    
     print(array.count)
+    print(array)
+    for _ in 0...100 {
+        array.remove(at: -1)
+    }
+    array.remove(at: 0)
+    array.remove(at: -1)
+    
+    print(array)
+    
 }
 
 runApplication()
-
