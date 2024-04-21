@@ -13,7 +13,7 @@ protocol IThreadSafetyArrayProtocol {
     
     mutating func append(_ item: Element)
     mutating func remove(at index: Int)
-    subscript(index: Int) -> Element { get }
+    subscript(index: Int) -> Element? { get }
     func contains(_ element: Element) -> Bool
 }
 
@@ -52,15 +52,36 @@ struct ThreadSafetyArray<Element : Equatable> : IThreadSafetyArrayProtocol {
     }
     
     mutating func remove(at index: Int) {
-        _ = safetyAction {
-            arrayElements.remove(at: index)
+        safetyAction {
+            if index >= 0, 
+                !arrayElements.isEmpty,
+                arrayElements.count > index {
+                arrayElements.remove(at: index)
+            } else if index < 0,
+                      arrayElements.count + index < arrayElements.count,
+                      !arrayElements.isEmpty {
+                arrayElements.remove(at: arrayElements.count + index)
+            } else {
+                print(Errors.outOfRange.rawValue)
+            }
         }
     }
     
-    subscript(index: Int) -> Element {
+    subscript(index: Int) -> Element? {
         safetyAction {
-            arrayElements[index]
+            if index < 0,
+               arrayElements.count + index >= 0,
+               index < arrayElements.count{
+                return arrayElements[index + arrayElements.count]
+            } else if index >= 0,
+                      index < arrayElements.count{
+                return arrayElements[index]
+            } else {
+                print(Errors.outOfRange.rawValue)
+                return nil
+            }
         }
+        
     }
     
     func contains(_ element: Element) -> Bool {
@@ -72,7 +93,9 @@ struct ThreadSafetyArray<Element : Equatable> : IThreadSafetyArrayProtocol {
 
 extension ThreadSafetyArray : CustomStringConvertible {
     var description: String {
-        String(describing: arrayElements)
+        safetyAction {
+            String(describing: arrayElements)
+        }
     }
 }
 
