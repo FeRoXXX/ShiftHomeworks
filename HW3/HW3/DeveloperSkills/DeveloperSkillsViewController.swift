@@ -7,10 +7,10 @@
 
 import UIKit
 
-class DeveloperSkills: UIViewController {
-    var dataManager : DataManager!
+class DeveloperSkillsViewController: UIViewController, IUsingDatas {
+    var dataManager : IDataManager?
     
-    var generalInformationTextView : UITextView = {
+    private let generalInformationTextView : UITextView = {
         let textView = UITextView()
         textView.isEditable = false
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ class DeveloperSkills: UIViewController {
         return textView
     }()
     
-    var otherLanguageButton : UIButton = {
+    private let otherLanguageButton : UIButton = {
         let button = UIButton()
         button.titleLabel?.numberOfLines = 0
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class DeveloperSkills: UIViewController {
         return button
     }()
     
-    var learningResultAlert : UIAlertController = {
+    private let learningResultAlert : UIAlertController = {
         let alert = UIAlertController()
         let okButton = UIAlertAction(title: "Ok", style: .cancel)
         alert.addAction(okButton)
@@ -47,43 +47,46 @@ class DeveloperSkills: UIViewController {
         setupButton()
     }
 
-    private func configureUI() {
+}
+
+private extension DeveloperSkillsViewController {
+    
+    func configureUI() {
         view.backgroundColor = .darkGray
         view.addSubview(generalInformationTextView)
         NSLayoutConstraint.activate([
-            generalInformationTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            generalInformationTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constraints.topConstrain),
             generalInformationTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            generalInformationTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            generalInformationTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constraints.leadingConstraint)
         ])
         
         view.addSubview(otherLanguageButton)
         NSLayoutConstraint.activate([
-            otherLanguageButton.topAnchor.constraint(equalTo: generalInformationTextView.bottomAnchor, constant: 20),
+            otherLanguageButton.topAnchor.constraint(equalTo: generalInformationTextView.bottomAnchor, constant: Constraints.topConstrain),
             otherLanguageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            otherLanguageButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            otherLanguageButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constraints.leadingConstraint),
             otherLanguageButton.heightAnchor.constraint(lessThanOrEqualToConstant: 150),
             otherLanguageButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 100)
         ])
     }
     
-    private func provideData() {
-        guard let generalInformation = dataManager.getData(from: 3),
-              let otherLanguage = dataManager.getData(from: 4),
-              let learningResult = dataManager.getData(from: 5) else {
+    func provideData() {
+        guard let dataManager = dataManager else {
             fatalError("Data is missing")
         }
+        let data = dataManager.getDeveloperSkillsData()
         
-        generalInformationTextView.attributedText = NSAttributedString(string: generalInformation.rawValue, attributes: [.font : UIFont.systemFont(ofSize: 14), .foregroundColor : UIColor.white])
-        otherLanguageButton.setAttributedTitle(NSAttributedString(string: otherLanguage.rawValue, attributes: [.font : UIFont.systemFont(ofSize: 14), .foregroundColor : UIColor.white]), for: .normal)
-        learningResultAlert.message = learningResult.rawValue
+        generalInformationTextView.attributedText = NSAttributedString(string: data.generalInformation, attributes: Fonts.system14)
+        otherLanguageButton.setAttributedTitle(NSAttributedString(string: data.otherLanguage, attributes: Fonts.system14), for: .normal)
+        learningResultAlert.message = data.learningResult
 
     }
     
-    private func setupButton() {
+    func setupButton() {
         otherLanguageButton.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
     }
     
     @objc func showAlert() {
-        self.present(learningResultAlert, animated: true)
+        present(learningResultAlert, animated: true)
     }
 }
