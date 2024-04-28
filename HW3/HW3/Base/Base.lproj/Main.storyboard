@@ -10,7 +10,7 @@
         <!--My Hobby-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController restorationIdentifier="MyHobby" storyboardIdentifier="MyHobby" title="My Hobby" id="BYZ-38-t0r" customClass="MyHobby" customModule="HW3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MyHobby" storyboardIdentifier="MyHobby" title="My Hobby" id="BYZ-38-t0r" customClass="MyHobbyViewController" customModule="HW3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
