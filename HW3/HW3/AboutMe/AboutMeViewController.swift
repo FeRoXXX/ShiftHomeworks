@@ -73,7 +73,7 @@ private extension AboutMeViewController {
         guard let dataManager = dataManager else {
             fatalError("Data is missing")
         }
-        let data = dataManager.getAboutMeInfo()
+        let data = dataManager.getAboutMe()
         profileImageView.image = UIImage(named: data.profilePhoto)
         firstAndLastNameTextField.attributedText = NSAttributedString(string: data.firstAndLastName, attributes: Fonts.systemBold20)
         aboutCityLabel.attributedText = NSAttributedString(string: data.aboutCity, attributes: Fonts.system20)

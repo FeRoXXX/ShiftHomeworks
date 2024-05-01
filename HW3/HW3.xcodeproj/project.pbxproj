@@ -12,7 +12,6 @@
 		2784457F2BDBCAE000EBE2D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2784457D2BDBCAE000EBE2D6 /* Main.storyboard */; };
 		278445812BDBCAE200EBE2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278445802BDBCAE200EBE2D6 /* Assets.xcassets */; };
 		278445842BDBCAE200EBE2D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278445822BDBCAE200EBE2D6 /* LaunchScreen.storyboard */; };
-		278445942BDBCB8B00EBE2D6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445932BDBCB8B00EBE2D6 /* Model.swift */; };
 		278445962BDBCBF900EBE2D6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445952BDBCBF900EBE2D6 /* TabBarController.swift */; };
 		2784459A2BDBCC4900EBE2D6 /* DeveloperSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445992BDBCC4900EBE2D6 /* DeveloperSkillsViewController.swift */; };
 		2784459C2BDBCC5B00EBE2D6 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784459B2BDBCC5B00EBE2D6 /* AboutMeViewController.swift */; };
@@ -22,6 +21,9 @@
 		278445DC2BDE9A7000EBE2D6 /* IUsingDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445DB2BDE9A7000EBE2D6 /* IUsingDatas.swift */; };
 		278445E32BDEB06200EBE2D6 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445E22BDEB06200EBE2D6 /* Fonts.swift */; };
 		278445E52BDEB21E00EBE2D6 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445E42BDEB21E00EBE2D6 /* Constraints.swift */; };
+		278445E72BE209AB00EBE2D6 /* AboutMeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445E62BE209AB00EBE2D6 /* AboutMeModel.swift */; };
+		278445E92BE2146F00EBE2D6 /* DeveloperSkillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445E82BE2146F00EBE2D6 /* DeveloperSkillsModel.swift */; };
+		278445EB2BE2147D00EBE2D6 /* MyHobbyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278445EA2BE2147D00EBE2D6 /* MyHobbyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +34,6 @@
 		278445802BDBCAE200EBE2D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278445832BDBCAE200EBE2D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278445852BDBCAE200EBE2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		278445932BDBCB8B00EBE2D6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		278445952BDBCBF900EBE2D6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		278445992BDBCC4900EBE2D6 /* DeveloperSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperSkillsViewController.swift; sourceTree = "<group>"; };
 		2784459B2BDBCC5B00EBE2D6 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,9 @@
 		278445DB2BDE9A7000EBE2D6 /* IUsingDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUsingDatas.swift; sourceTree = "<group>"; };
 		278445E22BDEB06200EBE2D6 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		278445E42BDEB21E00EBE2D6 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		278445E62BE209AB00EBE2D6 /* AboutMeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeModel.swift; sourceTree = "<group>"; };
+		278445E82BE2146F00EBE2D6 /* DeveloperSkillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperSkillsModel.swift; sourceTree = "<group>"; };
+		278445EA2BE2147D00EBE2D6 /* MyHobbyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHobbyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +94,12 @@
 		2784458B2BDBCAFE00EBE2D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				278445932BDBCB8B00EBE2D6 /* Model.swift */,
 				2784459F2BDD5CDE00EBE2D6 /* DataManager.swift */,
 				278445A12BDD5CFC00EBE2D6 /* IDataManager.swift */,
 				278445DB2BDE9A7000EBE2D6 /* IUsingDatas.swift */,
+				278445E62BE209AB00EBE2D6 /* AboutMeModel.swift */,
+				278445E82BE2146F00EBE2D6 /* DeveloperSkillsModel.swift */,
+				278445EA2BE2147D00EBE2D6 /* MyHobbyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,8 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278445942BDBCB8B00EBE2D6 /* Model.swift in Sources */,
+				278445EB2BE2147D00EBE2D6 /* MyHobbyModel.swift in Sources */,
 				278445A02BDD5CDE00EBE2D6 /* DataManager.swift in Sources */,
+				278445E72BE209AB00EBE2D6 /* AboutMeModel.swift in Sources */,
 				278445DC2BDE9A7000EBE2D6 /* IUsingDatas.swift in Sources */,
 				2784459C2BDBCC5B00EBE2D6 /* AboutMeViewController.swift in Sources */,
 				278445E52BDEB21E00EBE2D6 /* Constraints.swift in Sources */,
@@ -248,6 +255,7 @@
 				2784457A2BDBCAE000EBE2D6 /* SceneDelegate.swift in Sources */,
 				278445E32BDEB06200EBE2D6 /* Fonts.swift in Sources */,
 				278445962BDBCBF900EBE2D6 /* TabBarController.swift in Sources */,
+				278445E92BE2146F00EBE2D6 /* DeveloperSkillsModel.swift in Sources */,
 				2784459E2BDBCC7E00EBE2D6 /* MyHobbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

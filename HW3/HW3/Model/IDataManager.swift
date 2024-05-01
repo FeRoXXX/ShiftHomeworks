@@ -8,8 +8,8 @@
 import Foundation
 
 protocol IDataManager {
-    func getHobby(from id: Int) -> HardCodeTextModel.Hobby?
-    func getAboutMeInfo() -> (profilePhoto: String, firstAndLastName: String, aboutCity: String)
-    func getDeveloperSkillsData() -> (generalInformation: String, otherLanguage: String, learningResult: String)
-    func getMyHobbyData(from text: HardCodeTextModel.Hobby) -> String
+    func getAboutMe() -> (profilePhoto: String, firstAndLastName: String, aboutCity: String)
+    func getDeveloperSkills() -> (generalInformation: String, otherLanguage: String, learningResult: String)
+    func getMyHobby(hobby: MyHobbyModel.Hobby) -> String
+    func getMyHobbyInfo(id: Int) -> MyHobbyModel.Hobby?
 }

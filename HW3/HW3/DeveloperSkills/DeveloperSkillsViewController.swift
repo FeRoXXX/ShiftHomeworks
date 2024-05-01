@@ -74,7 +74,7 @@ private extension DeveloperSkillsViewController {
         guard let dataManager = dataManager else {
             fatalError("Data is missing")
         }
-        let data = dataManager.getDeveloperSkillsData()
+        let data = dataManager.getDeveloperSkills()
         
         generalInformationTextView.attributedText = NSAttributedString(string: data.generalInformation, attributes: Fonts.system14)
         otherLanguageButton.setAttributedTitle(NSAttributedString(string: data.otherLanguage, attributes: Fonts.system14), for: .normal)

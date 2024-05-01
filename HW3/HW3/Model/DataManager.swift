@@ -8,41 +8,43 @@
 import Foundation
 
 class DataManager: IDataManager {
-    private var model : HardCodeTextModel
+    private var aboutMeModel: AboutMeModel
+    private var developerSkillsModel: DeveloperSkillsModel
+    private var myHobbyModel: MyHobbyModel
     
-    init(model: HardCodeTextModel) {
-        self.model = model
+    init(aboutMeModel: AboutMeModel, developerSkillsModel: DeveloperSkillsModel, myHobbyModel: MyHobbyModel) {
+        self.aboutMeModel = aboutMeModel
+        self.developerSkillsModel = developerSkillsModel
+        self.myHobbyModel = myHobbyModel
     }
     
-    func getHobby(from id: Int) -> HardCodeTextModel.Hobby? {
-        for (index, element) in HardCodeTextModel.Hobby.allCases.enumerated() where index == id {
+    func getAboutMe() -> (profilePhoto: String, firstAndLastName: String, aboutCity: String) {
+        return (aboutMeModel.profilePhoto, 
+                aboutMeModel.firstAndLastName,
+                aboutMeModel.aboutCity)
+    }
+    
+    func getDeveloperSkills() -> (generalInformation: String, otherLanguage: String, learningResult: String) {
+        return (developerSkillsModel.generalInformation,
+                developerSkillsModel.otherLanguage,
+                developerSkillsModel.learningResult)
+    }
+    
+    func getMyHobby(hobby: MyHobbyModel.Hobby) -> String {
+        switch hobby {
+        case .carDrive:
+            return myHobbyModel.carDrive
+        case .cooking:
+            return myHobbyModel.cooking
+        case .guitar:
+            return myHobbyModel.playingTheGuitar
+        }
+    }
+    
+    func getMyHobbyInfo(id: Int) -> MyHobbyModel.Hobby? {
+        for (index, element) in MyHobbyModel.Hobby.allCases.enumerated() where index == id {
             return element
         }
         return nil
-    }
-    
-    func getAboutMeInfo() -> (profilePhoto: String, firstAndLastName: String, aboutCity: String) {
-        let profilePhoto = model.profilePhoto
-        let firstAndLastName = model.firstAndLastName
-        let aboutCity = model.aboutCity
-        return (profilePhoto, firstAndLastName, aboutCity)
-    }
-    
-    func getDeveloperSkillsData() -> (generalInformation: String, otherLanguage: String, learningResult: String) {
-        let generalInformation = model.generalInformation
-        let otherLanguage = model.otherLanguage
-        let learningResult = model.learningResult
-        return (generalInformation, otherLanguage, learningResult)
-    }
-    
-    func getMyHobbyData(from text: HardCodeTextModel.Hobby) -> String {
-        switch text {
-        case .carDrive:
-            return model.carDrive
-        case .cooking:
-            return model.cooking
-        case .guitar:
-            return model.playingTheGuitar
-        }
     }
 }
