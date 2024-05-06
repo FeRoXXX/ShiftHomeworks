@@ -12,6 +12,8 @@
 		277A018C2BE8D31A00258EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277A018B2BE8D31A00258EEE /* Assets.xcassets */; };
 		277A018F2BE8D31A00258EEE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 277A018E2BE8D31A00258EEE /* Base */; };
 		277A019D2BE8D41F00258EEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A019C2BE8D41F00258EEE /* HomeViewController.swift */; };
+		277A019F2BE8D5DD00258EEE /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A019E2BE8D5DD00258EEE /* DishesModel.swift */; };
+		277A01A12BE8D5E700258EEE /* DishDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A02BE8D5E700258EEE /* DishDescriptionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		277A018E2BE8D31A00258EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		277A01902BE8D31A00258EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277A019C2BE8D41F00258EEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		277A019E2BE8D5DD00258EEE /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
+		277A01A02BE8D5E700258EEE /* DishDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDescriptionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		277A01992BE8D37300258EEE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				277A019E2BE8D5DD00258EEE /* DishesModel.swift */,
+				277A01A02BE8D5E700258EEE /* DishDescriptionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				277A01832BE8D31800258EEE /* AppDelegate.swift in Sources */,
+				277A019F2BE8D5DD00258EEE /* DishesModel.swift in Sources */,
+				277A01A12BE8D5E700258EEE /* DishDescriptionModel.swift in Sources */,
 				277A01852BE8D31800258EEE /* SceneDelegate.swift in Sources */,
 				277A019D2BE8D41F00258EEE /* HomeViewController.swift in Sources */,
 			);
