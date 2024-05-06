@@ -14,6 +14,10 @@
 		277A019D2BE8D41F00258EEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A019C2BE8D41F00258EEE /* HomeViewController.swift */; };
 		277A019F2BE8D5DD00258EEE /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A019E2BE8D5DD00258EEE /* DishesModel.swift */; };
 		277A01A12BE8D5E700258EEE /* DishDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A02BE8D5E700258EEE /* DishDescriptionModel.swift */; };
+		277A01A52BE8D66D00258EEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A42BE8D66D00258EEE /* HomeView.swift */; };
+		277A01A72BE8D69500258EEE /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A62BE8D69500258EEE /* HomeCollectionViewCell.swift */; };
+		277A01A92BE8D6B100258EEE /* HomeCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A82BE8D6B100258EEE /* HomeCollectionViewDataSource.swift */; };
+		277A01AB2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01AA2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		277A019C2BE8D41F00258EEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		277A019E2BE8D5DD00258EEE /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
 		277A01A02BE8D5E700258EEE /* DishDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDescriptionModel.swift; sourceTree = "<group>"; };
+		277A01A42BE8D66D00258EEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		277A01A62BE8D69500258EEE /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		277A01A82BE8D6B100258EEE /* HomeCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		277A01AA2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,8 @@
 		277A019A2BE8D37A00258EEE /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
+				277A01A32BE8D64700258EEE /* Support */,
+				277A01A22BE8D63F00258EEE /* Views */,
 				277A019B2BE8D40A00258EEE /* Controllers */,
 			);
 			path = HomeController;
@@ -116,6 +126,24 @@
 				277A019C2BE8D41F00258EEE /* HomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		277A01A22BE8D63F00258EEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				277A01A42BE8D66D00258EEE /* HomeView.swift */,
+				277A01A62BE8D69500258EEE /* HomeCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		277A01A32BE8D64700258EEE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				277A01A82BE8D6B100258EEE /* HomeCollectionViewDataSource.swift */,
+				277A01AA2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,11 +216,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277A01A92BE8D6B100258EEE /* HomeCollectionViewDataSource.swift in Sources */,
+				277A01A72BE8D69500258EEE /* HomeCollectionViewCell.swift in Sources */,
 				277A01832BE8D31800258EEE /* AppDelegate.swift in Sources */,
 				277A019F2BE8D5DD00258EEE /* DishesModel.swift in Sources */,
 				277A01A12BE8D5E700258EEE /* DishDescriptionModel.swift in Sources */,
+				277A01A52BE8D66D00258EEE /* HomeView.swift in Sources */,
 				277A01852BE8D31800258EEE /* SceneDelegate.swift in Sources */,
 				277A019D2BE8D41F00258EEE /* HomeViewController.swift in Sources */,
+				277A01AB2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
