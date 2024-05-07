@@ -8,11 +8,17 @@
 import UIKit
 
 class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+    var dishesDataManager: IDishesDataManager = DishesDataManager()
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        dishesDataManager.getCountOfData()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.setupData(with: dishesDataManager.getDataFromIndex(from: indexPath.row))
+        return cell
     }
 }
