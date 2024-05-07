@@ -18,6 +18,10 @@
 		277A01A72BE8D69500258EEE /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A62BE8D69500258EEE /* HomeCollectionViewCell.swift */; };
 		277A01A92BE8D6B100258EEE /* HomeCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01A82BE8D6B100258EEE /* HomeCollectionViewDataSource.swift */; };
 		277A01AB2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01AA2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift */; };
+		277A01AD2BE8D83400258EEE /* DishesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01AC2BE8D83400258EEE /* DishesDataManager.swift */; };
+		277A01B12BE8D85700258EEE /* IDishesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01B02BE8D85700258EEE /* IDishesDataManager.swift */; };
+		277A01B52BE8DD8000258EEE /* Dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = 277A01B42BE8DD8000258EEE /* Dishes.json */; };
+		277A01BA2BEA06FD00258EEE /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A01B92BEA06FD00258EEE /* DishDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		277A01A62BE8D69500258EEE /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		277A01A82BE8D6B100258EEE /* HomeCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		277A01AA2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		277A01AC2BE8D83400258EEE /* DishesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDataManager.swift; sourceTree = "<group>"; };
+		277A01B02BE8D85700258EEE /* IDishesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDishesDataManager.swift; sourceTree = "<group>"; };
+		277A01B42BE8DD8000258EEE /* Dishes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dishes.json; sourceTree = "<group>"; };
+		277A01B92BEA06FD00258EEE /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		277A01812BE8D31800258EEE /* HW4 */ = {
 			isa = PBXGroup;
 			children = (
+				277A01B62BEA06C000258EEE /* DishDetailController */,
 				277A019A2BE8D37A00258EEE /* HomeController */,
 				277A01992BE8D37300258EEE /* Models */,
 				277A01982BE8D36200258EEE /* Base */,
@@ -106,6 +115,9 @@
 			children = (
 				277A019E2BE8D5DD00258EEE /* DishesModel.swift */,
 				277A01A02BE8D5E700258EEE /* DishDescriptionModel.swift */,
+				277A01AC2BE8D83400258EEE /* DishesDataManager.swift */,
+				277A01B02BE8D85700258EEE /* IDishesDataManager.swift */,
+				277A01B42BE8DD8000258EEE /* Dishes.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +156,30 @@
 				277A01AA2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		277A01B62BEA06C000258EEE /* DishDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				277A01B82BEA06DE00258EEE /* Controllers */,
+				277A01B72BEA06D400258EEE /* Views */,
+			);
+			path = DishDetailController;
+			sourceTree = "<group>";
+		};
+		277A01B72BEA06D400258EEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		277A01B82BEA06DE00258EEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				277A01B92BEA06FD00258EEE /* DishDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277A01B52BE8DD8000258EEE /* Dishes.json in Resources */,
 				277A018C2BE8D31A00258EEE /* Assets.xcassets in Resources */,
 				277A018F2BE8D31A00258EEE /* Base in Resources */,
 			);
@@ -219,10 +256,13 @@
 				277A01A92BE8D6B100258EEE /* HomeCollectionViewDataSource.swift in Sources */,
 				277A01A72BE8D69500258EEE /* HomeCollectionViewCell.swift in Sources */,
 				277A01832BE8D31800258EEE /* AppDelegate.swift in Sources */,
+				277A01BA2BEA06FD00258EEE /* DishDetailViewController.swift in Sources */,
 				277A019F2BE8D5DD00258EEE /* DishesModel.swift in Sources */,
 				277A01A12BE8D5E700258EEE /* DishDescriptionModel.swift in Sources */,
+				277A01AD2BE8D83400258EEE /* DishesDataManager.swift in Sources */,
 				277A01A52BE8D66D00258EEE /* HomeView.swift in Sources */,
 				277A01852BE8D31800258EEE /* SceneDelegate.swift in Sources */,
+				277A01B12BE8D85700258EEE /* IDishesDataManager.swift in Sources */,
 				277A019D2BE8D41F00258EEE /* HomeViewController.swift in Sources */,
 				277A01AB2BE8D6C900258EEE /* HomeCollectionViewDelegate.swift in Sources */,
 			);
