@@ -1,0 +1,113 @@
+[
+    {
+        "dishImage": "Carbonara",
+        "dishName": "Карбонары",
+        "cookingTime": "30 минут",
+        "cookingTimeImage": "easy",
+        "dishDescription": {
+            "dishName": "Карбонары",
+            "dishImage": "картинка_1.jpg",
+            "dishRecipe": "Рецепт приготовления карбонар отсутствует"
+        }
+    },
+    {
+        "dishImage": "Chkmeruli",
+        "dishName": "Чхмерули",
+        "cookingTime": "40 минут",
+        "cookingTimeImage": "medium",
+        "dishDescription": {
+            "dishName": "Чхмерули",
+            "dishImage": "картинка_2.jpg",
+            "dishRecipe": "Рецепт приготовления чхмерули отсутствует"
+        }
+    },
+    {
+        "dishImage": "Borsch",
+        "dishName": "Борщ",
+        "cookingTime": "1 час",
+        "cookingTimeImage": "hard",
+        "dishDescription": {
+            "dishName": "Борщ",
+            "dishImage": "картинка_3.jpg",
+            "dishRecipe": "Рецепт приготовления борща отсутствует"
+        }
+    },
+    {
+        "dishImage": "Pelmeni",
+        "dishName": "Пельмени",
+        "cookingTime": "20 минут",
+        "cookingTimeImage": "easy",
+        "dishDescription": {
+            "dishName": "Пельмени",
+            "dishImage": "картинка_4.jpg",
+            "dishRecipe": "Рецепт приготовления пельменей отсутствует"
+        }
+    },
+    {
+        "dishImage": "Pizza",
+        "dishName": "Пицца",
+        "cookingTime": "45 минут",
+        "cookingTimeImage": "hard",
+        "dishDescription": {
+            "dishName": "Пицца",
+            "dishImage": "картинка_5.jpg",
+            "dishRecipe": "Рецепт приготовления пиццы отсутствует"
+        }
+    },
+    {
+        "dishImage": "Burger",
+        "dishName": "Бургер",
+        "cookingTime": "30 минут",
+        "cookingTimeImage": "medium",
+        "dishDescription": {
+            "dishName": "Бургер",
+            "dishImage": "картинка_6.jpg",
+            "dishRecipe": "Рецепт приготовления бургера отсутствует"
+        }
+    },
+    {
+        "dishImage": "Cake",
+        "dishName": "Торт",
+        "cookingTime": "1 час",
+        "cookingTimeImage": "hard",
+        "dishDescription": {
+            "dishName": "Торт",
+            "dishImage": "картинка_7.jpg",
+            "dishRecipe": "Рецепт приготовления торта отсутствует"
+        }
+    },
+    {
+        "dishImage": "Limonade",
+        "dishName": "Лимонад",
+        "cookingTime": "10 минут",
+        "cookingTimeImage": "easy",
+        "dishDescription": {
+            "dishName": "Лимонад",
+            "dishImage": "картинка_8.jpg",
+            "dishRecipe": "Рецепт приготовления лимонада отсутствует"
+        }
+    },
+    {
+        "dishImage": "Butterbrot",
+        "dishName":
+        "Бутерброд с овощами",
+        "cookingTime": "15 минут",
+        "cookingTimeImage": "easy",
+        "dishDescription": {
+            "dishName": "Бутерброд с овощами",
+            "dishImage": "картинка_9.jpg",
+            "dishRecipe": "Рецепт приготовления бутерброда с овощами отсутствует"
+        }
+    },
+    {
+        "dishImage": "TarTar",
+        "dishName": "Тар-тар",
+        "cookingTime": "20 минут",
+        "cookingTimeImage": "easy",
+        "dishDescription": {
+            "dishName": "Тар-тар",
+            "dishImage": "картинка_10.jpg",
+            "dishRecipe": "Рецепт приготовления тар-тара отсутствует"
+        }
+    }
+]
