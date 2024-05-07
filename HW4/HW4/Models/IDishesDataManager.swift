@@ -10,4 +10,5 @@ import Foundation
 protocol IDishesDataManager {
     func getCountOfData() -> Int
     func getDataFromIndex(from index: Int) -> DishesModel
+    func getDescriptionFromIndex(from index: Int) -> DishDescriptionModel
 }

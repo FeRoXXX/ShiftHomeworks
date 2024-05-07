@@ -10,5 +10,6 @@ import Foundation
 struct DishDescriptionModel: Decodable {
     let dishName: String
     let dishImage: String
+    let dishDescription: String
     let dishRecipe: String
 }

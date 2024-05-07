@@ -1,13 +1,14 @@
 [
     {
         "dishImage": "Carbonara",
-        "dishName": "Карбонары",
+        "dishName": "Карбонара",
         "cookingTime": "30 минут",
         "cookingTimeImage": "easy",
         "dishDescription": {
-            "dishName": "Карбонары",
-            "dishImage": "картинка_1.jpg",
-            "dishRecipe": "Рецепт приготовления карбонар отсутствует"
+            "dishName": "Карбонара",
+            "dishImage": "Carbonara",
+            "dishDescription": "Паста карбонара - самая популярная итальянская паста в мире. Секрет её популярности не только в доступности ингредиентов и времени приготовления. Главное, это неповторимый вкус - сливочный и нежный, хотя настоящая паста карбонара готовится без сливок. Важно соблюдать рецепт приготовления, чтобы получился правильный соус.",
+            "dishRecipe": "ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ\n 1. Спагетти варить 7-10 минут в кипящей подсоленной воде и откинуть на дуршлаг.\n 2. В сковороде разогрейте оливковое масло, положите чеснок и слегка подрумяньте.\n 3. Ветчину/бекон мелко нарежьте, добавьте к чесноку и обжаривайте 5 минут.\n 4. Сыр пармезан натрите на мелкой терке. Желтки взбить со сливками, немного подсолить.\n 5.Спагетти переложить в сотейник с чесноком и ветчиной/беконом.\n 6. Добавить взбитые желтки и тёртый сыр, перемешать. Держать на огне 3 минуты.\n 7. Посыпать молотым перцем, украсить зеленью и подавать на стол."
         }
     },
     {
@@ -17,7 +18,8 @@
         "cookingTimeImage": "medium",
         "dishDescription": {
             "dishName": "Чхмерули",
-            "dishImage": "картинка_2.jpg",
+            "dishImage": "Chkmeruli",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления чхмерули отсутствует"
         }
     },
@@ -28,7 +30,8 @@
         "cookingTimeImage": "hard",
         "dishDescription": {
             "dishName": "Борщ",
-            "dishImage": "картинка_3.jpg",
+            "dishImage": "Borsch",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления борща отсутствует"
         }
     },
@@ -39,7 +42,8 @@
         "cookingTimeImage": "easy",
         "dishDescription": {
             "dishName": "Пельмени",
-            "dishImage": "картинка_4.jpg",
+            "dishImage": "Pelmeni",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления пельменей отсутствует"
         }
     },
@@ -50,7 +54,8 @@
         "cookingTimeImage": "hard",
         "dishDescription": {
             "dishName": "Пицца",
-            "dishImage": "картинка_5.jpg",
+            "dishImage": "Pizza",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления пиццы отсутствует"
         }
     },
@@ -61,7 +66,8 @@
         "cookingTimeImage": "medium",
         "dishDescription": {
             "dishName": "Бургер",
-            "dishImage": "картинка_6.jpg",
+            "dishImage": "Burger",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления бургера отсутствует"
         }
     },
@@ -72,7 +78,8 @@
         "cookingTimeImage": "hard",
         "dishDescription": {
             "dishName": "Торт",
-            "dishImage": "картинка_7.jpg",
+            "dishImage": "Cake",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления торта отсутствует"
         }
     },
@@ -83,7 +90,8 @@
         "cookingTimeImage": "easy",
         "dishDescription": {
             "dishName": "Лимонад",
-            "dishImage": "картинка_8.jpg",
+            "dishImage": "Limonade",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления лимонада отсутствует"
         }
     },
@@ -95,7 +103,8 @@
         "cookingTimeImage": "easy",
         "dishDescription": {
             "dishName": "Бутерброд с овощами",
-            "dishImage": "картинка_9.jpg",
+            "dishImage": "Butterbrot",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления бутерброда с овощами отсутствует"
         }
     },
@@ -106,7 +115,8 @@
         "cookingTimeImage": "easy",
         "dishDescription": {
             "dishName": "Тар-тар",
-            "dishImage": "картинка_10.jpg",
+            "dishImage": "TarTar",
+            "dishDescription": "d",
             "dishRecipe": "Рецепт приготовления тар-тара отсутствует"
         }
     }

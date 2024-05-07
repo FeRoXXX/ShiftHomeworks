@@ -33,4 +33,8 @@ extension DishesDataManager: IDishesDataManager {
     func getDataFromIndex(from index: Int) -> DishesModel {
         model[index]
     }
+    
+    func getDescriptionFromIndex(from index: Int) -> DishDescriptionModel {
+        model[index].dishDescription
+    }
 }
