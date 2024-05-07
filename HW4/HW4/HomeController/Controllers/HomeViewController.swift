@@ -13,8 +13,15 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
     }
+}
 
+private extension HomeViewController {
+    func setupUI() {
+        view = homeView
+    }
 }
 
 extension HomeViewController: HomeCollectionViewDelegate {
