@@ -11,6 +11,12 @@ struct DishesModel: Decodable {
     let dishImage: String
     let dishName: String
     let cookingTime: String
-    let cookingTimeImage: String
+    let cookingTimeImage: CookingTimeImage
     let dishDescription: DishDescriptionModel
+    
+    enum CookingTimeImage: String, Decodable {
+        case easy = "easy"
+        case medium = "medium"
+        case hard = "hard"
+    }
 }
