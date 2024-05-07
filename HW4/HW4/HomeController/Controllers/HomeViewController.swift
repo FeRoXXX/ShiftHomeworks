@@ -25,5 +25,9 @@ private extension HomeViewController {
 }
 
 extension HomeViewController: HomeCollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = DishDetailViewController(dataManager: homeView.dataSource.dishesDataManager, numberOfItem: indexPath.row)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
