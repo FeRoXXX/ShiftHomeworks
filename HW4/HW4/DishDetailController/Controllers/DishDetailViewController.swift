@@ -9,13 +9,11 @@ import UIKit
 
 class DishDetailViewController: UIViewController {
 
-    private lazy var dishDetailView = DishDetailView(dataManager: dataManager, numberOfItem: numberOfItem, delegate: self)
-    let dataManager: IDishesDataManager
-    let numberOfItem: Int
+    private lazy var dishDetailView = DishDetailView(delegate: self)
+    let dataManager: IDishesDescriptionDataManager
     
-    init(dataManager: IDishesDataManager, numberOfItem: Int) {
+    init(dataManager: IDishesDescriptionDataManager) {
         self.dataManager = dataManager
-        self.numberOfItem = numberOfItem
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,10 +27,6 @@ class DishDetailViewController: UIViewController {
         
         setupUI()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
 
 }
 
@@ -43,7 +37,8 @@ private extension DishDetailViewController {
 }
 
 extension DishDetailViewController: ShowReceiptDelegate {
-    func showReceiptViewController(_ viewController: UIViewController) {
+    func showReceiptViewController() {
+        let viewController = DishReceiptViewController(dataManager: dataManager)
         present(viewController, animated: true)
     }
 }

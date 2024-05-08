@@ -8,5 +8,6 @@
 import UIKit
 
 protocol ShowReceiptDelegate: NSObject {
-    func showReceiptViewController(_ viewController: UIViewController)
+    var dataManager: IDishesDescriptionDataManager { get }
+    func showReceiptViewController()
 }
