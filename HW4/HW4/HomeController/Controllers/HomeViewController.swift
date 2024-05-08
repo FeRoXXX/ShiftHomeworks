@@ -16,6 +16,14 @@ class HomeViewController: UIViewController {
         
         setupUI()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 }
 
 private extension HomeViewController {
@@ -26,8 +34,7 @@ private extension HomeViewController {
 
 extension HomeViewController: HomeCollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = DishDetailViewController(dataManager: homeView.dataSource.dishesDataManager, numberOfItem: indexPath.row)
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        let controller = DishDetailViewController(dataManager: homeView.dataSource.dishesDataManager.getDescriptionManager(from: indexPath.row))
         navigationController?.pushViewController(controller, animated: true)
     }
 }
