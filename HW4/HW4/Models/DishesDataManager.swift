@@ -26,15 +26,15 @@ class DishesDataManager {
 }
 
 extension DishesDataManager: IDishesDataManager {
+    func getDescriptionManager(from index: Int) -> DishesDescriptionDataManager {
+        DishesDescriptionDataManager(model: model[index].dishDescription)
+    }
+    
     func getCountOfData() -> Int {
         model.count
     }
     
     func getDataFromIndex(from index: Int) -> DishesModel {
         model[index]
-    }
-    
-    func getDescriptionFromIndex(from index: Int) -> DishDescriptionModel {
-        model[index].dishDescription
     }
 }
