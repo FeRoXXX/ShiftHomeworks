@@ -8,9 +8,6 @@
 import UIKit
 
 class DishDetailView: UIView {
-    
-    private let dataManager: IDishesDataManager
-    private let numberOfItem: Int
     weak var delegate: ShowReceiptDelegate?
     
     private lazy var contentStackView: UIStackView = {
@@ -20,9 +17,9 @@ class DishDetailView: UIView {
                                                        showReceiptButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 50
+        stackView.spacing = 10
         stackView.alignment = .center
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fill
         return stackView
     }()
     
@@ -44,7 +41,6 @@ class DishDetailView: UIView {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = .clear
         textView.numberOfLines = 0
-        textView.setContentHuggingPriority(UILayoutPriority(249), for: .vertical)
         return textView
     }()
     
@@ -58,9 +54,7 @@ class DishDetailView: UIView {
         return button
     }()
     
-    init(dataManager: IDishesDataManager, numberOfItem: Int, delegate: ShowReceiptDelegate) {
-        self.dataManager = dataManager
-        self.numberOfItem = numberOfItem
+    init(delegate: ShowReceiptDelegate) {
         self.delegate = delegate
         super.init(frame: .zero)
         setupUI()
@@ -72,18 +66,32 @@ class DishDetailView: UIView {
         fatalError("view doesn't exist")
     }
     
+    override func layoutSubviews() {
+        switch UIDevice.current.orientation {
+        case .portrait:
+            dishImageView.isHidden = false
+        case .landscapeLeft, .landscapeRight:
+            dishImageView.isHidden = true
+        default:
+            break
+        }
+    }
+    
 }
 
 private extension DishDetailView {
     func setupData() {
-        let data = dataManager.getDescriptionFromIndex(from: numberOfItem)
+        guard let delegate = delegate else {
+            return
+        }
+        let data = delegate.dataManager.getData()
         dishImageView.image = UIImage(named: data.dishImage)
         dishNameLabel.attributedText = NSAttributedString(string: data.dishName, attributes: Fonts.systemWhite20)
         dishDescriptionLabel.attributedText = NSAttributedString(string: data.dishDescription, attributes: Fonts.systemWhite14)
     }
     
     @objc func showViewController() {
-        delegate?.showReceiptViewController(HomeViewController())
+        delegate?.showReceiptViewController()
     }
 }
 
@@ -105,7 +113,7 @@ private extension DishDetailView {
             contentStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             contentStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             contentStackView.bottomAnchor.constraint(lessThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor),
-            dishImageView.heightAnchor.constraint(equalToConstant: 300)
+            dishImageView.heightAnchor.constraint(equalTo: dishImageView.widthAnchor, multiplier: 0.7)
         ])
     }
     
