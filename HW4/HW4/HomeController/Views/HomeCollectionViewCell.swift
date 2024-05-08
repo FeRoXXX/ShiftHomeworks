@@ -21,7 +21,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private lazy var dishNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         return label
     }()
@@ -34,7 +33,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     private lazy var cookieTimeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -65,9 +63,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     func setupData(with model: DishesModel) {
         dishImageView.image = UIImage(named: model.dishImage)
-        dishNameLabel.text = model.dishName
+        dishNameLabel.attributedText = NSAttributedString(string: model.dishName, attributes: Fonts.systemWhite20)
         cookieTimeImageView.image = UIImage(named: model.cookingTimeImage.rawValue)
-        cookieTimeLabel.text = model.cookingTime
+        cookieTimeLabel.attributedText = NSAttributedString(string: model.cookingTime, attributes: Fonts.systemWhite20)
     }
     
     required init?(coder: NSCoder) {
