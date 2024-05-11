@@ -9,6 +9,7 @@ import UIKit
 
 class DishDetailView: UIView {
     weak var delegate: ShowReceiptDelegate?
+    private let data: DishDescriptionModel
     
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [dishImageView,
@@ -54,7 +55,8 @@ class DishDetailView: UIView {
         return button
     }()
     
-    init(delegate: ShowReceiptDelegate) {
+    init(data: DishDescriptionModel, delegate: ShowReceiptDelegate) {
+        self.data = data
         self.delegate = delegate
         super.init(frame: .zero)
         setupUI()
@@ -76,15 +78,10 @@ class DishDetailView: UIView {
             break
         }
     }
-    
 }
 
 private extension DishDetailView {
     func setupData() {
-        guard let delegate = delegate else {
-            return
-        }
-        let data = delegate.dataManager.getData()
         dishImageView.image = UIImage(named: data.dishImage)
         dishNameLabel.attributedText = NSAttributedString(string: data.dishName, attributes: Fonts.systemWhite20)
         dishDescriptionLabel.attributedText = NSAttributedString(string: data.dishDescription, attributes: Fonts.systemWhite14)
@@ -96,7 +93,6 @@ private extension DishDetailView {
 }
 
 private extension DishDetailView {
-    
     func setupUI() {
         backgroundColor = .darkGray
         setupSubviews()
@@ -116,5 +112,4 @@ private extension DishDetailView {
             dishImageView.heightAnchor.constraint(equalTo: dishImageView.widthAnchor, multiplier: 0.7)
         ])
     }
-    
 }
