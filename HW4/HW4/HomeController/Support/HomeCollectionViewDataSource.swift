@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    var dishesDataManager: IDishesDataManager = DishesDataManager()
+    var dishesDataManager: IDishesDataRepository = DishesDataRepository()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         dishesDataManager.getCountOfData()
@@ -18,7 +18,9 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setupData(with: dishesDataManager.getDataFromIndex(from: indexPath.row))
+        if let data = dishesDataManager.getDataFromIndex(from: indexPath.row) {
+            cell.setupData(with: data)
+        }
         return cell
     }
 }
