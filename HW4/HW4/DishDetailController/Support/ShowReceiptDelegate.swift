@@ -7,7 +7,6 @@
 
 import UIKit
 
-protocol ShowReceiptDelegate: NSObject {
-    var dataManager: IDishesDescriptionDataManager { get }
+protocol ShowReceiptDelegate: AnyObject {
     func showReceiptViewController()
 }
