@@ -32,7 +32,7 @@ class HomeView: UIView {
         case .portrait, .portraitUpsideDown:
             collectionView.collectionViewLayout = createCompositionalLayoutForPortrait()
         case .landscapeLeft, .landscapeRight:
-            collectionView.collectionViewLayout = createCompositionalLayoutForRight()
+            collectionView.collectionViewLayout = createCompositionalLayoutForLandscape()
         default:
             break
         }
@@ -54,15 +54,12 @@ private extension HomeView {
         group.interItemSpacing = .fixed(10)
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
-        
         section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        
         let layout = UICollectionViewCompositionalLayout(section: section)
-        
         return layout
     }
     
-    func createCompositionalLayoutForRight() -> UICollectionViewLayout {
+    func createCompositionalLayoutForLandscape() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.7))
@@ -70,11 +67,8 @@ private extension HomeView {
         group.interItemSpacing = .fixed(10)
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
-        
         section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        
         let layout = UICollectionViewCompositionalLayout(section: section)
-        
         return layout
     }
     

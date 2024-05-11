@@ -61,15 +61,15 @@ class HomeCollectionViewCell: UICollectionViewCell {
         setupUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("Cell doesn't exist")
+    }
+    
     func setupData(with model: DishesModel) {
         dishImageView.image = UIImage(named: model.dishImage)
         dishNameLabel.attributedText = NSAttributedString(string: model.dishName, attributes: Fonts.systemWhite20)
         cookieTimeImageView.image = UIImage(named: model.cookingTimeImage.rawValue)
         cookieTimeLabel.attributedText = NSAttributedString(string: model.cookingTime, attributes: Fonts.systemWhite20)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("Cell doesn't exist")
     }
 }
 
