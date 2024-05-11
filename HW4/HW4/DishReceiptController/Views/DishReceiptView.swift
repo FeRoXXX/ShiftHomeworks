@@ -8,7 +8,7 @@
 import UIKit
 
 class DishReceiptView: UIView {
-    weak var delegate: DataManagerDelegate?
+    private let data: DishDescriptionModel
     
     private lazy var receiptTextView: UITextView = {
         let textView = UITextView()
@@ -19,8 +19,8 @@ class DishReceiptView: UIView {
         return textView
     }()
     
-    init(delegate: DataManagerDelegate) {
-        self.delegate = delegate
+    init(data: DishDescriptionModel) {
+        self.data = data
         super.init(frame: .zero)
         setupUI()
         setupData()
@@ -53,10 +53,6 @@ private extension DishReceiptView {
     }
     
     func setupData() {
-        guard let delegate = delegate else {
-            return
-        }
-        let data = delegate.dataManager.getData()
         receiptTextView.attributedText = NSAttributedString(string: data.dishRecipe, attributes: Fonts.systemWhite14)
     }
 }
