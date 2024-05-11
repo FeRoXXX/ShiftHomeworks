@@ -8,12 +8,11 @@
 import UIKit
 
 class DishReceiptViewController: UIViewController {
+    private let data: DishDescriptionModel
+    private lazy var dishReceiptView = DishReceiptView(data: data)
     
-    var dataManager: IDishesDescriptionDataManager
-    private lazy var dishReceiptView = DishReceiptView(delegate: self)
-    
-    init(dataManager: IDishesDescriptionDataManager) {
-        self.dataManager = dataManager
+    init(data: DishDescriptionModel) {
+        self.data = data
         super.init(nibName: nil, bundle: nil)
         setupUI()
     }
@@ -25,7 +24,6 @@ class DishReceiptViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
 }
@@ -35,5 +33,3 @@ private extension DishReceiptViewController {
         view = dishReceiptView
     }
 }
-
-extension DishReceiptViewController: DataManagerDelegate {}
