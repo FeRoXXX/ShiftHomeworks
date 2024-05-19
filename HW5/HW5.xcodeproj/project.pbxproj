@@ -25,6 +25,20 @@
 		27515E622BF9FA56008103F2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E612BF9FA56008103F2 /* Errors.swift */; };
 		27515E642BF9FD71008103F2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E632BF9FD71008103F2 /* HomeViewModel.swift */; };
 		27515E662BFA0592008103F2 /* CookingTimeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E652BFA0592008103F2 /* CookingTimeImage.swift */; };
+		27515E692BFA0DC8008103F2 /* DishDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E682BFA0DC8008103F2 /* DishDetailPresenter.swift */; };
+		27515E6B2BFA0DD5008103F2 /* IDishDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E6A2BFA0DD5008103F2 /* IDishDetailPresenter.swift */; };
+		27515E6D2BFA0E70008103F2 /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E6C2BFA0E70008103F2 /* DishDetailViewController.swift */; };
+		27515E6F2BFA1138008103F2 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E6E2BFA1138008103F2 /* DishDetailView.swift */; };
+		27515E712BFA1206008103F2 /* ShowReceiptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E702BFA1206008103F2 /* ShowReceiptDelegate.swift */; };
+		27515E732BFA128E008103F2 /* IDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E722BFA128E008103F2 /* IDishDetailView.swift */; };
+		27515E772BFA1F0B008103F2 /* DishReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E762BFA1F0B008103F2 /* DishReceiptView.swift */; };
+		27515E792BFA1F19008103F2 /* DishReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E782BFA1F19008103F2 /* DishReceiptViewController.swift */; };
+		27515E7B2BFA2894008103F2 /* DishReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E7A2BFA2894008103F2 /* DishReceiptViewModel.swift */; };
+		27515E7D2BFA28A9008103F2 /* DishReceiptViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E7C2BFA28A9008103F2 /* DishReceiptViewModelDelegate.swift */; };
+		27515E832BFA338B008103F2 /* DishReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E822BFA338B008103F2 /* DishReceiptModel.swift */; };
+		27515E882BFA3577008103F2 /* DishDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E872BFA3577008103F2 /* DishDetailModel.swift */; };
+		27515E8A2BFA3F0E008103F2 /* DishDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E892BFA3F0E008103F2 /* DishDetailRepository.swift */; };
+		27515E8C2BFA3F59008103F2 /* IDishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515E8B2BFA3F59008103F2 /* IDishDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +62,20 @@
 		27515E612BF9FA56008103F2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		27515E632BF9FD71008103F2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		27515E652BFA0592008103F2 /* CookingTimeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingTimeImage.swift; sourceTree = "<group>"; };
+		27515E682BFA0DC8008103F2 /* DishDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailPresenter.swift; sourceTree = "<group>"; };
+		27515E6A2BFA0DD5008103F2 /* IDishDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDishDetailPresenter.swift; sourceTree = "<group>"; };
+		27515E6C2BFA0E70008103F2 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
+		27515E6E2BFA1138008103F2 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
+		27515E702BFA1206008103F2 /* ShowReceiptDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReceiptDelegate.swift; sourceTree = "<group>"; };
+		27515E722BFA128E008103F2 /* IDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDishDetailView.swift; sourceTree = "<group>"; };
+		27515E762BFA1F0B008103F2 /* DishReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishReceiptView.swift; sourceTree = "<group>"; };
+		27515E782BFA1F19008103F2 /* DishReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishReceiptViewController.swift; sourceTree = "<group>"; };
+		27515E7A2BFA2894008103F2 /* DishReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishReceiptViewModel.swift; sourceTree = "<group>"; };
+		27515E7C2BFA28A9008103F2 /* DishReceiptViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishReceiptViewModelDelegate.swift; sourceTree = "<group>"; };
+		27515E822BFA338B008103F2 /* DishReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishReceiptModel.swift; sourceTree = "<group>"; };
+		27515E872BFA3577008103F2 /* DishDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailModel.swift; sourceTree = "<group>"; };
+		27515E892BFA3F0E008103F2 /* DishDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailRepository.swift; sourceTree = "<group>"; };
+		27515E8B2BFA3F59008103F2 /* IDishDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDishDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +167,9 @@
 		27515E2B2BF9EBE5008103F2 /* DishDetail */ = {
 			isa = PBXGroup;
 			children = (
+				27515E862BFA355D008103F2 /* Model */,
 				27515E322BF9EC54008103F2 /* Presenter */,
 				27515E312BF9EC48008103F2 /* View */,
-				27515E302BF9EC40008103F2 /* Model */,
 			);
 			path = DishDetail;
 			sourceTree = "<group>";
@@ -160,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				27515E4D2BF9F3C3008103F2 /* HomeViewController.swift */,
-				27515E632BF9FD71008103F2 /* HomeViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,13 +208,7 @@
 			children = (
 				27515E572BF9F918008103F2 /* DishesDataRepository.swift */,
 				27515E5A2BF9F92D008103F2 /* IDishesDataRepository.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		27515E302BF9EC40008103F2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				27515E632BF9FD71008103F2 /* HomeViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +216,10 @@
 		27515E312BF9EC48008103F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27515E6C2BFA0E70008103F2 /* DishDetailViewController.swift */,
+				27515E6E2BFA1138008103F2 /* DishDetailView.swift */,
+				27515E702BFA1206008103F2 /* ShowReceiptDelegate.swift */,
+				27515E722BFA128E008103F2 /* IDishDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +227,8 @@
 		27515E322BF9EC54008103F2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				27515E682BFA0DC8008103F2 /* DishDetailPresenter.swift */,
+				27515E6A2BFA0DD5008103F2 /* IDishDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -209,6 +236,7 @@
 		27515E332BF9EC65008103F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27515E822BFA338B008103F2 /* DishReceiptModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +244,8 @@
 		27515E342BF9EC6B008103F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27515E762BFA1F0B008103F2 /* DishReceiptView.swift */,
+				27515E782BFA1F19008103F2 /* DishReceiptViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +253,8 @@
 		27515E352BF9EC6F008103F2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				27515E7A2BFA2894008103F2 /* DishReceiptViewModel.swift */,
+				27515E7C2BFA28A9008103F2 /* DishReceiptViewModelDelegate.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,6 +293,16 @@
 				27515E5C2BF9F9F8008103F2 /* Dishes.json */,
 			);
 			path = GeneralModel;
+			sourceTree = "<group>";
+		};
+		27515E862BFA355D008103F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27515E872BFA3577008103F2 /* DishDetailModel.swift */,
+				27515E892BFA3F0E008103F2 /* DishDetailRepository.swift */,
+				27515E8B2BFA3F59008103F2 /* IDishDetail.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,21 +376,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27515E832BFA338B008103F2 /* DishReceiptModel.swift in Sources */,
 				27515E522BF9F41C008103F2 /* HomeCollectionViewCell.swift in Sources */,
+				27515E772BFA1F0B008103F2 /* DishReceiptView.swift in Sources */,
 				27515E582BF9F918008103F2 /* DishesDataRepository.swift in Sources */,
+				27515E8A2BFA3F0E008103F2 /* DishDetailRepository.swift in Sources */,
 				27515E4E2BF9F3C3008103F2 /* HomeViewController.swift in Sources */,
+				27515E6D2BFA0E70008103F2 /* DishDetailViewController.swift in Sources */,
 				27515E4C2BF9F36B008103F2 /* HomeCollectionViewDelegate.swift in Sources */,
 				27515E602BF9FA4D008103F2 /* Fonts.swift in Sources */,
 				27515E122BF9EA8B008103F2 /* AppDelegate.swift in Sources */,
 				27515E502BF9F3E7008103F2 /* HomeView.swift in Sources */,
+				27515E712BFA1206008103F2 /* ShowReceiptDelegate.swift in Sources */,
+				27515E692BFA0DC8008103F2 /* DishDetailPresenter.swift in Sources */,
+				27515E7D2BFA28A9008103F2 /* DishReceiptViewModelDelegate.swift in Sources */,
+				27515E6F2BFA1138008103F2 /* DishDetailView.swift in Sources */,
 				27515E622BF9FA56008103F2 /* Errors.swift in Sources */,
 				27515E5B2BF9F92D008103F2 /* IDishesDataRepository.swift in Sources */,
 				27515E642BF9FD71008103F2 /* HomeViewModel.swift in Sources */,
+				27515E792BFA1F19008103F2 /* DishReceiptViewController.swift in Sources */,
 				27515E662BFA0592008103F2 /* CookingTimeImage.swift in Sources */,
+				27515E8C2BFA3F59008103F2 /* IDishDetail.swift in Sources */,
 				27515E562BF9F905008103F2 /* DishesDescriptionModel.swift in Sources */,
 				27515E542BF9F8F9008103F2 /* DishesModel.swift in Sources */,
 				27515E142BF9EA8B008103F2 /* SceneDelegate.swift in Sources */,
 				27515E4A2BF9F357008103F2 /* HomeCollectionViewDataSource.swift in Sources */,
+				27515E882BFA3577008103F2 /* DishDetailModel.swift in Sources */,
+				27515E7B2BFA2894008103F2 /* DishReceiptViewModel.swift in Sources */,
+				27515E732BFA128E008103F2 /* IDishDetailView.swift in Sources */,
+				27515E6B2BFA0DD5008103F2 /* IDishDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

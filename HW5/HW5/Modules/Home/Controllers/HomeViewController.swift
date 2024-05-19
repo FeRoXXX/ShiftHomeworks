@@ -47,7 +47,10 @@ private extension HomeViewController {
         let data = dishesDataRepository.getData()
         var convertData: [HomeViewModel] = []
         for item in data {
-            convertData.append(.init(dishImage: item.dishImage, dishName: item.dishName, cookingTime: item.cookingTime, cookingTimeImage: item.cookingTimeImage))
+            convertData.append(.init(dishImage: item.dishImage, 
+                                     dishName: item.dishName,
+                                     cookingTime: item.cookingTime,
+                                     cookingTimeImage: item.cookingTimeImage))
         }
         homeView.dataSource.data = convertData
     }
@@ -55,9 +58,9 @@ private extension HomeViewController {
 
 extension HomeViewController: HomeCollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //if let data = homeView.dataSource.dishesDataManager.getDescriptionData(from: indexPath.row) {
-            //let controller = DishDetailViewController(data: data)
-            //navigationController?.pushViewController(controller, animated: true)
-        //}
+        let model = DishDetailRepository(dishesDataArray: dishesDataRepository.getData())
+        let presenter = DishDetailPresenter(dataRepository: model, index: indexPath.row)
+        let controller = DishDetailViewController(presenter: presenter)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
