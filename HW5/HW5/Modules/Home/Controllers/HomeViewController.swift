@@ -8,8 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    private lazy var homeView = HomeView(delegate: self)
-    var dishesDataRepository: IDishesDataRepository
+    private lazy var homeView = HomeView(delegate: self, dataSource: dataSource)
+    private var dataSource = HomeCollectionViewDataSource()
+    private var dishesDataRepository: IDishesDataRepository
     
     init(dishesDataRepository: IDishesDataRepository) {
         self.dishesDataRepository = dishesDataRepository
@@ -46,21 +47,37 @@ private extension HomeViewController {
     func dataRequest() {
         let data = dishesDataRepository.getData()
         var convertData: [HomeViewModel] = []
-        for item in data {
-            convertData.append(.init(dishImage: item.dishImage, 
-                                     dishName: item.dishName,
-                                     cookingTime: item.cookingTime,
-                                     cookingTimeImage: item.cookingTimeImage))
+        _ = data.map {
+            convertData.append(.init(dishImage: $0.dishImage,
+                                     dishName: $0.dishName,
+                                     cookingTime: $0.cookingTime,
+                                     cookingTimeImage: $0.cookingTimeImage))
         }
-        homeView.dataSource.data = convertData
+        dataSource.data = convertData
+    }
+    
+    func assemblyNewController(index: Int) -> UIViewController{
+        guard let data = dataRequest(from: index) else {
+            fatalError(Errors.dataIsMissing.rawValue)
+        }
+        let presenter = DishDetailPresenter(dishDescription: data)
+        let controller = DishDetailViewController(presenter: presenter)
+        return controller
+    }
+    
+    func dataRequest(from index: Int) -> DishDescriptionModel?{
+        let data = dishesDataRepository.getData()
+        guard data.count > index else {
+            print(Errors.outOfBounds.rawValue)
+            return nil
+        }
+        
+        return data[index].dishDescription
     }
 }
 
 extension HomeViewController: HomeCollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let model = DishDetailRepository(dishesDataArray: dishesDataRepository.getData())
-        let presenter = DishDetailPresenter(dataRepository: model, index: indexPath.row)
-        let controller = DishDetailViewController(presenter: presenter)
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(assemblyNewController(index: indexPath.row), animated: true)
     }
 }
