@@ -9,5 +9,5 @@ import Foundation
 
 protocol IDishDetailView: AnyObject {
     func set(model: DishDetailModel)
-    func showReceiptViewController(data: [DishesModel], index: Int)
+    func showReceiptViewController(data: DishDescriptionModel)
 }

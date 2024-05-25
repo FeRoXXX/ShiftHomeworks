@@ -8,7 +8,7 @@
 import UIKit
 
 class DishDetailView: UIView {
-    weak var delegate: ShowReceiptDelegate?
+    var nextButtonTapped: (() -> Void)?
     
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [dishImageView,
@@ -54,8 +54,7 @@ class DishDetailView: UIView {
         return button
     }()
     
-    init(delegate: ShowReceiptDelegate) {
-        self.delegate = delegate
+    init() {
         super.init(frame: .zero)
         setupUI()
     }
@@ -107,6 +106,6 @@ private extension DishDetailView {
     }
     
     @objc func showViewController() {
-        delegate?.nextScreenButtonTapped()
+        nextButtonTapped?()
     }
 }

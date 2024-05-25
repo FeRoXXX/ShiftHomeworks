@@ -9,7 +9,7 @@ import UIKit
 
 class DishDetailViewController: UIViewController {
     private let presenter: DishDetailPresenter
-    private lazy var dishDetailView = DishDetailView(delegate: self)
+    private lazy var dishDetailView = DishDetailView()
     
     init(presenter: DishDetailPresenter) {
         self.presenter = presenter
@@ -24,6 +24,7 @@ class DishDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupClousure()
         presenter.didLoad(view: self)
     }
 }
@@ -32,16 +33,21 @@ private extension DishDetailViewController {
     func setupUI() {
         view = dishDetailView
     }
+    
+    func setupClousure() {
+        dishDetailView.nextButtonTapped = { [weak self] in
+            self?.nextScreenButtonTapped()
+        }
+    }
 }
 
-extension DishDetailViewController: ShowReceiptDelegate, IDishDetailView {
+extension DishDetailViewController: IDishDetailView {
     func nextScreenButtonTapped() {
         presenter.toNextScreen()
     }
     
-    func showReceiptViewController(data: [DishesModel], index: Int) {
-        let viewController = DishReceiptViewController(viewModel: DishReceiptViewModel(data: data, index: index))
-        present(viewController, animated: true)
+    func showReceiptViewController(data: DishDescriptionModel) {
+        present(DishReceiptViewController(viewModel: DishReceiptViewModel(data: data)), animated: true)
     }
     
     func set(model: DishDetailModel) {
