@@ -10,31 +10,24 @@ import Foundation
 final class DishDetailPresenter {
     private weak var ui: IDishDetailView?
     private var descriptionData: DishDetailModel?
-    private let dataRepository: IDishesDataRepository
-    private let index: Int
+    private let dishDescription: DishDescriptionModel
     
-    init(dataRepository: IDishesDataRepository, index: Int) {
-        self.dataRepository = dataRepository
-        self.index = index
+    init(dishDescription: DishDescriptionModel) {
+        self.dishDescription = dishDescription
     }
 }
 
 extension DishDetailPresenter: IDishDetailPresenter {
     
     func toNextScreen() {
-        ui?.showReceiptViewController(data: dataRepository.getData(), index: index)
+        ui?.showReceiptViewController(data: dishDescription)
     }
     
     func didLoad(view: IDishDetailView) {
         ui = view
-        let tempData = dataRepository.getData()
-        guard tempData.count > index else {
-            fatalError(Errors.outOfBounds.rawValue)
-        }
-        let data = tempData[index].dishDescription
-        descriptionData = DishDetailModel(dishName: data.dishName,
-                                          dishImage: data.dishImage,
-                                          dishDescription: data.dishDescription)
+        descriptionData = DishDetailModel(dishName: dishDescription.dishName,
+                                          dishImage: dishDescription.dishImage,
+                                          dishDescription: dishDescription.dishDescription)
         guard let convertedData = descriptionData else {
             fatalError(Errors.dataIsMissing.rawValue)
         }
