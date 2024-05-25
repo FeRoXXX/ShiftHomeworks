@@ -8,22 +8,19 @@
 import UIKit
 
 class HomeView: UIView {
-    weak var delegate: HomeCollectionViewDelegate?
-    let dataSource = HomeCollectionViewDataSource()
     
-    lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayoutForPortrait())
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
         collectionView.backgroundColor = .clear
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
-    init(delegate: HomeCollectionViewDelegate) {
+    init(delegate: HomeCollectionViewDelegate, dataSource: HomeCollectionViewDataSource) {
         super.init(frame: .zero)
-        self.delegate = delegate
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
         setupUI()
     }
     
