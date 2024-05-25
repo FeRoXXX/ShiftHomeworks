@@ -32,7 +32,6 @@ class DishReceiptView: UIView {
 extension DishReceiptView {
     func setupData(data: DishReceiptModel) {
         receiptTextView.attributedText = NSAttributedString(string: data.dishRecipe, attributes: Fonts.systemWhite14)
-        print("Data updated")
     }
 }
 

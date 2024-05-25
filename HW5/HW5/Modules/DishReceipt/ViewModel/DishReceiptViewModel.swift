@@ -8,8 +8,7 @@
 import Foundation
 
 class DishReceiptViewModel {
-    var data: [DishesModel]
-    var index: Int
+    var data: DishDescriptionModel
     
     weak var delegate: DishReceiptViewModelDelegate? {
         didSet {
@@ -23,20 +22,23 @@ class DishReceiptViewModel {
         }
     }
     
-    init(data: [DishesModel], index: Int) {
+    init(data: DishDescriptionModel) {
         self.data = data
-        self.index = index
-        self.receiptData = DishReceiptModel(dishRecipe: data[index].dishDescription.dishRecipe)
+        self.receiptData = DishReceiptModel(dishRecipe: data.dishRecipe)
         startTimer()
     }
     
     func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: Double.random(in: 0...10), repeats: true) { [weak self] _ in
+        Timer.scheduledTimer(withTimeInterval: Double.random(in: 0...15), repeats: true) { [weak self] _ in
             self?.updateData()
         }
     }
     
     private func updateData() {
-        receiptData = DishReceiptModel(dishRecipe: data[index].dishDescription.dishRecipe)
+        guard let element = Wishes.allCases.randomElement() else {
+            receiptData = DishReceiptModel(dishRecipe: "Error")
+            return
+        }
+        receiptData = DishReceiptModel(dishRecipe: element.rawValue)
     }
 }
