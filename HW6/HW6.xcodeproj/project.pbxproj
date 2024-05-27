@@ -9,20 +9,33 @@
 /* Begin PBXBuildFile section */
 		27515F692C04DFBE008103F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F682C04DFBE008103F2 /* AppDelegate.swift */; };
 		27515F6B2C04DFBE008103F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F6A2C04DFBE008103F2 /* SceneDelegate.swift */; };
-		27515F6D2C04DFBE008103F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F6C2C04DFBE008103F2 /* ViewController.swift */; };
 		27515F722C04DFC0008103F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27515F712C04DFC0008103F2 /* Assets.xcassets */; };
 		27515F752C04DFC0008103F2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 27515F742C04DFC0008103F2 /* Base */; };
 		27515F822C04E1AF008103F2 /* Model.json in Resources */ = {isa = PBXBuildFile; fileRef = 27515F812C04E1AF008103F2 /* Model.json */; };
 		27515F842C04E1C2008103F2 /* CarMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F832C04E1C2008103F2 /* CarMarkModel.swift */; };
 		27515F862C04E1D7008103F2 /* CarDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F852C04E1D7008103F2 /* CarDetailModel.swift */; };
 		27515F882C04E1EC008103F2 /* CarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F872C04E1EC008103F2 /* CarType.swift */; };
+		27515F8E2C04E289008103F2 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F8D2C04E289008103F2 /* ChooseViewController.swift */; };
+		27515F902C04E2B5008103F2 /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F8F2C04E2B5008103F2 /* ChooseView.swift */; };
+		27515F922C04E2D0008103F2 /* ChooseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F912C04E2D0008103F2 /* ChooseTableViewCell.swift */; };
+		27515F942C04E2E4008103F2 /* IChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F932C04E2E4008103F2 /* IChooseView.swift */; };
+		27515F962C04E30F008103F2 /* CarNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F952C04E30F008103F2 /* CarNameModel.swift */; };
+		27515F982C04E32E008103F2 /* ChoosePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F972C04E32E008103F2 /* ChoosePresenter.swift */; };
+		27515F9A2C04E356008103F2 /* IChoosePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F992C04E356008103F2 /* IChoosePresenter.swift */; };
+		27515F9C2C04E376008103F2 /* ChooseDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F9B2C04E376008103F2 /* ChooseDataRepository.swift */; };
+		27515F9E2C04E393008103F2 /* IChooseDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515F9D2C04E393008103F2 /* IChooseDataRepository.swift */; };
+		27515FA12C04E3D8008103F2 /* ChooseTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FA02C04E3D7008103F2 /* ChooseTableViewDataSource.swift */; };
+		27515FA42C04E3F6008103F2 /* ChooseScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FA32C04E3F6008103F2 /* ChooseScreenAssembly.swift */; };
+		27515FA72C04E461008103F2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FA62C04E461008103F2 /* Errors.swift */; };
+		27515FA92C04E475008103F2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FA82C04E475008103F2 /* Fonts.swift */; };
+		27515FAB2C04E482008103F2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FAA2C04E482008103F2 /* Colors.swift */; };
+		27515FAD2C04E496008103F2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FAC2C04E496008103F2 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27515F652C04DFBE008103F2 /* HW6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27515F682C04DFBE008103F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27515F6A2C04DFBE008103F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27515F6C2C04DFBE008103F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27515F712C04DFC0008103F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27515F742C04DFC0008103F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27515F762C04DFC0008103F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +43,21 @@
 		27515F832C04E1C2008103F2 /* CarMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMarkModel.swift; sourceTree = "<group>"; };
 		27515F852C04E1D7008103F2 /* CarDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailModel.swift; sourceTree = "<group>"; };
 		27515F872C04E1EC008103F2 /* CarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarType.swift; sourceTree = "<group>"; };
+		27515F8D2C04E289008103F2 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		27515F8F2C04E2B5008103F2 /* ChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
+		27515F912C04E2D0008103F2 /* ChooseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTableViewCell.swift; sourceTree = "<group>"; };
+		27515F932C04E2E4008103F2 /* IChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChooseView.swift; sourceTree = "<group>"; };
+		27515F952C04E30F008103F2 /* CarNameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNameModel.swift; sourceTree = "<group>"; };
+		27515F972C04E32E008103F2 /* ChoosePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePresenter.swift; sourceTree = "<group>"; };
+		27515F992C04E356008103F2 /* IChoosePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChoosePresenter.swift; sourceTree = "<group>"; };
+		27515F9B2C04E376008103F2 /* ChooseDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDataRepository.swift; sourceTree = "<group>"; };
+		27515F9D2C04E393008103F2 /* IChooseDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChooseDataRepository.swift; sourceTree = "<group>"; };
+		27515FA02C04E3D7008103F2 /* ChooseTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTableViewDataSource.swift; sourceTree = "<group>"; };
+		27515FA32C04E3F6008103F2 /* ChooseScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseScreenAssembly.swift; sourceTree = "<group>"; };
+		27515FA62C04E461008103F2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		27515FA82C04E475008103F2 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		27515FAA2C04E482008103F2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		27515FAC2C04E496008103F2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +90,12 @@
 		27515F672C04DFBE008103F2 /* HW6 */ = {
 			isa = PBXGroup;
 			children = (
+				27515FA52C04E44D008103F2 /* Constants */,
 				27515F802C04E15D008103F2 /* GeneralModel */,
 				27515F7F2C04DFE1008103F2 /* Modules */,
 				27515F7E2C04DFDC008103F2 /* Base */,
 				27515F7D2C04DFD6008103F2 /* Recources */,
 				27515F7C2C04DFCF008103F2 /* App */,
-				27515F6C2C04DFBE008103F2 /* ViewController.swift */,
 			);
 			path = HW6;
 			sourceTree = "<group>";
@@ -101,6 +129,7 @@
 		27515F7F2C04DFE1008103F2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				27515F892C04E23B008103F2 /* ChooseScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -114,6 +143,75 @@
 				27515F872C04E1EC008103F2 /* CarType.swift */,
 			);
 			path = GeneralModel;
+			sourceTree = "<group>";
+		};
+		27515F892C04E23B008103F2 /* ChooseScreen */ = {
+			isa = PBXGroup;
+			children = (
+				27515FA22C04E3EE008103F2 /* Assembly */,
+				27515F9F2C04E3B2008103F2 /* Support */,
+				27515F8C2C04E257008103F2 /* Presenter */,
+				27515F8B2C04E253008103F2 /* View */,
+				27515F8A2C04E24E008103F2 /* Model */,
+			);
+			path = ChooseScreen;
+			sourceTree = "<group>";
+		};
+		27515F8A2C04E24E008103F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27515F9B2C04E376008103F2 /* ChooseDataRepository.swift */,
+				27515F9D2C04E393008103F2 /* IChooseDataRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27515F8B2C04E253008103F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27515F8D2C04E289008103F2 /* ChooseViewController.swift */,
+				27515F8F2C04E2B5008103F2 /* ChooseView.swift */,
+				27515F912C04E2D0008103F2 /* ChooseTableViewCell.swift */,
+				27515F932C04E2E4008103F2 /* IChooseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27515F8C2C04E257008103F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				27515F952C04E30F008103F2 /* CarNameModel.swift */,
+				27515F972C04E32E008103F2 /* ChoosePresenter.swift */,
+				27515F992C04E356008103F2 /* IChoosePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		27515F9F2C04E3B2008103F2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				27515FA02C04E3D7008103F2 /* ChooseTableViewDataSource.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		27515FA22C04E3EE008103F2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				27515FA32C04E3F6008103F2 /* ChooseScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		27515FA52C04E44D008103F2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				27515FA62C04E461008103F2 /* Errors.swift */,
+				27515FA82C04E475008103F2 /* Fonts.swift */,
+				27515FAA2C04E482008103F2 /* Colors.swift */,
+				27515FAC2C04E496008103F2 /* MockData.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +285,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27515F922C04E2D0008103F2 /* ChooseTableViewCell.swift in Sources */,
 				27515F882C04E1EC008103F2 /* CarType.swift in Sources */,
+				27515F9C2C04E376008103F2 /* ChooseDataRepository.swift in Sources */,
+				27515F9A2C04E356008103F2 /* IChoosePresenter.swift in Sources */,
 				27515F862C04E1D7008103F2 /* CarDetailModel.swift in Sources */,
-				27515F6D2C04DFBE008103F2 /* ViewController.swift in Sources */,
+				27515F942C04E2E4008103F2 /* IChooseView.swift in Sources */,
+				27515F9E2C04E393008103F2 /* IChooseDataRepository.swift in Sources */,
+				27515F962C04E30F008103F2 /* CarNameModel.swift in Sources */,
+				27515FA12C04E3D8008103F2 /* ChooseTableViewDataSource.swift in Sources */,
+				27515FAD2C04E496008103F2 /* MockData.swift in Sources */,
 				27515F692C04DFBE008103F2 /* AppDelegate.swift in Sources */,
 				27515F6B2C04DFBE008103F2 /* SceneDelegate.swift in Sources */,
+				27515F8E2C04E289008103F2 /* ChooseViewController.swift in Sources */,
+				27515FAB2C04E482008103F2 /* Colors.swift in Sources */,
+				27515F982C04E32E008103F2 /* ChoosePresenter.swift in Sources */,
+				27515FA72C04E461008103F2 /* Errors.swift in Sources */,
 				27515F842C04E1C2008103F2 /* CarMarkModel.swift in Sources */,
+				27515FA42C04E3F6008103F2 /* ChooseScreenAssembly.swift in Sources */,
+				27515FA92C04E475008103F2 /* Fonts.swift in Sources */,
+				27515F902C04E2B5008103F2 /* ChooseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
