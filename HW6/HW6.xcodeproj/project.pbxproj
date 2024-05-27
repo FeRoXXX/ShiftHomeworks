@@ -30,6 +30,18 @@
 		27515FA92C04E475008103F2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FA82C04E475008103F2 /* Fonts.swift */; };
 		27515FAB2C04E482008103F2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FAA2C04E482008103F2 /* Colors.swift */; };
 		27515FAD2C04E496008103F2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FAC2C04E496008103F2 /* MockData.swift */; };
+		27515FB42C04E5B8008103F2 /* ChooseTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FB32C04E5B8008103F2 /* ChooseTableViewDelegate.swift */; };
+		27515FB62C04E603008103F2 /* DetailsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FB52C04E603008103F2 /* DetailsTableViewDelegate.swift */; };
+		27515FB82C04E613008103F2 /* DetailsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FB72C04E613008103F2 /* DetailsTableViewDataSource.swift */; };
+		27515FBA2C04E652008103F2 /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FB92C04E652008103F2 /* DetailsAssembly.swift */; };
+		27515FBC2C04E66F008103F2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FBB2C04E66F008103F2 /* DetailsViewController.swift */; };
+		27515FBE2C04E685008103F2 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FBD2C04E685008103F2 /* DetailsView.swift */; };
+		27515FC02C04E69E008103F2 /* BodyTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FBF2C04E69E008103F2 /* BodyTypeTableViewCell.swift */; };
+		27515FC22C04E6C4008103F2 /* IDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FC12C04E6C4008103F2 /* IDetailsView.swift */; };
+		27515FC42C04E6FD008103F2 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FC32C04E6FD008103F2 /* DetailsPresenter.swift */; };
+		27515FC62C04E711008103F2 /* IDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FC52C04E711008103F2 /* IDetailsPresenter.swift */; };
+		27515FC82C04E72A008103F2 /* CarTypeDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FC72C04E72A008103F2 /* CarTypeDetailsModel.swift */; };
+		27515FCA2C04E74D008103F2 /* CarTypeWithSelectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27515FC92C04E74D008103F2 /* CarTypeWithSelectModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +70,18 @@
 		27515FA82C04E475008103F2 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		27515FAA2C04E482008103F2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		27515FAC2C04E496008103F2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		27515FB32C04E5B8008103F2 /* ChooseTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTableViewDelegate.swift; sourceTree = "<group>"; };
+		27515FB52C04E603008103F2 /* DetailsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewDelegate.swift; sourceTree = "<group>"; };
+		27515FB72C04E613008103F2 /* DetailsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewDataSource.swift; sourceTree = "<group>"; };
+		27515FB92C04E652008103F2 /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
+		27515FBB2C04E66F008103F2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		27515FBD2C04E685008103F2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		27515FBF2C04E69E008103F2 /* BodyTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTypeTableViewCell.swift; sourceTree = "<group>"; };
+		27515FC12C04E6C4008103F2 /* IDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDetailsView.swift; sourceTree = "<group>"; };
+		27515FC32C04E6FD008103F2 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		27515FC52C04E711008103F2 /* IDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDetailsPresenter.swift; sourceTree = "<group>"; };
+		27515FC72C04E72A008103F2 /* CarTypeDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypeDetailsModel.swift; sourceTree = "<group>"; };
+		27515FC92C04E74D008103F2 /* CarTypeWithSelectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypeWithSelectModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +153,7 @@
 		27515F7F2C04DFE1008103F2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				27515FAE2C04E558008103F2 /* DetailsScreen */,
 				27515F892C04E23B008103F2 /* ChooseScreen */,
 			);
 			path = Modules;
@@ -191,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				27515FA02C04E3D7008103F2 /* ChooseTableViewDataSource.swift */,
+				27515FB32C04E5B8008103F2 /* ChooseTableViewDelegate.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -212,6 +238,56 @@
 				27515FAC2C04E496008103F2 /* MockData.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		27515FAE2C04E558008103F2 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				27515FB22C04E592008103F2 /* Presenter */,
+				27515FB12C04E58E008103F2 /* View */,
+				27515FB02C04E587008103F2 /* Assembly */,
+				27515FAF2C04E570008103F2 /* Support */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		27515FAF2C04E570008103F2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				27515FB52C04E603008103F2 /* DetailsTableViewDelegate.swift */,
+				27515FB72C04E613008103F2 /* DetailsTableViewDataSource.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		27515FB02C04E587008103F2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				27515FB92C04E652008103F2 /* DetailsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		27515FB12C04E58E008103F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27515FBB2C04E66F008103F2 /* DetailsViewController.swift */,
+				27515FBD2C04E685008103F2 /* DetailsView.swift */,
+				27515FBF2C04E69E008103F2 /* BodyTypeTableViewCell.swift */,
+				27515FC12C04E6C4008103F2 /* IDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27515FB22C04E592008103F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				27515FC32C04E6FD008103F2 /* DetailsPresenter.swift */,
+				27515FC52C04E711008103F2 /* IDetailsPresenter.swift */,
+				27515FC72C04E72A008103F2 /* CarTypeDetailsModel.swift */,
+				27515FC92C04E74D008103F2 /* CarTypeWithSelectModel.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27515FC82C04E72A008103F2 /* CarTypeDetailsModel.swift in Sources */,
 				27515F922C04E2D0008103F2 /* ChooseTableViewCell.swift in Sources */,
 				27515F882C04E1EC008103F2 /* CarType.swift in Sources */,
 				27515F9C2C04E376008103F2 /* ChooseDataRepository.swift in Sources */,
 				27515F9A2C04E356008103F2 /* IChoosePresenter.swift in Sources */,
 				27515F862C04E1D7008103F2 /* CarDetailModel.swift in Sources */,
+				27515FB62C04E603008103F2 /* DetailsTableViewDelegate.swift in Sources */,
 				27515F942C04E2E4008103F2 /* IChooseView.swift in Sources */,
 				27515F9E2C04E393008103F2 /* IChooseDataRepository.swift in Sources */,
 				27515F962C04E30F008103F2 /* CarNameModel.swift in Sources */,
@@ -297,11 +375,21 @@
 				27515FAD2C04E496008103F2 /* MockData.swift in Sources */,
 				27515F692C04DFBE008103F2 /* AppDelegate.swift in Sources */,
 				27515F6B2C04DFBE008103F2 /* SceneDelegate.swift in Sources */,
+				27515FC62C04E711008103F2 /* IDetailsPresenter.swift in Sources */,
+				27515FB82C04E613008103F2 /* DetailsTableViewDataSource.swift in Sources */,
+				27515FBA2C04E652008103F2 /* DetailsAssembly.swift in Sources */,
 				27515F8E2C04E289008103F2 /* ChooseViewController.swift in Sources */,
 				27515FAB2C04E482008103F2 /* Colors.swift in Sources */,
 				27515F982C04E32E008103F2 /* ChoosePresenter.swift in Sources */,
 				27515FA72C04E461008103F2 /* Errors.swift in Sources */,
+				27515FBE2C04E685008103F2 /* DetailsView.swift in Sources */,
+				27515FBC2C04E66F008103F2 /* DetailsViewController.swift in Sources */,
+				27515FC42C04E6FD008103F2 /* DetailsPresenter.swift in Sources */,
+				27515FB42C04E5B8008103F2 /* ChooseTableViewDelegate.swift in Sources */,
 				27515F842C04E1C2008103F2 /* CarMarkModel.swift in Sources */,
+				27515FC22C04E6C4008103F2 /* IDetailsView.swift in Sources */,
+				27515FC02C04E69E008103F2 /* BodyTypeTableViewCell.swift in Sources */,
+				27515FCA2C04E74D008103F2 /* CarTypeWithSelectModel.swift in Sources */,
 				27515FA42C04E3F6008103F2 /* ChooseScreenAssembly.swift in Sources */,
 				27515FA92C04E475008103F2 /* Fonts.swift in Sources */,
 				27515F902C04E2B5008103F2 /* ChooseView.swift in Sources */,

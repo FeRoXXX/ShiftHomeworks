@@ -7,8 +7,6 @@
 
 import UIKit
 
-protocol ChooseTableViewDelegate: NSObject, UITableViewDelegate {}
-
 final class ChooseViewController: UIViewController {
     private let presenter: IChoosePresenter
     private let dataSource: IChooseDataSource
