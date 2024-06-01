@@ -35,8 +35,8 @@ final class ChooseTableViewDataSource: NSObject {
 
 extension ChooseTableViewDataSource: IChooseDataSource {
     func set(model: [CarMarkModel]) {
-        model.forEach {
-            carNameArray.append(CarNameModel(carName: $0.markName))
+        carNameArray = model.map {
+            CarNameModel(carName: $0.markName)
         }
     }
 }
