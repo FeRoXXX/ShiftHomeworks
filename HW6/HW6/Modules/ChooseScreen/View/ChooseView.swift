@@ -33,9 +33,8 @@ final class ChooseView: UIView {
         return tableView
     }()
     
-    init(delegate: ChooseTableViewDelegate, dataSource: IChooseDataSource) {
+    init(delegate: ChooseTableViewDelegate) {
         tableView.delegate = delegate
-        tableView.dataSource = dataSource
         super.init(frame: .zero)
         setupUI()
     }
@@ -68,6 +67,12 @@ private extension ChooseView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 15),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+}
+
+extension ChooseView {
+    func setupDataSource(dataSource: IChooseDataSource) {
+        tableView.dataSource = dataSource
     }
 }
 

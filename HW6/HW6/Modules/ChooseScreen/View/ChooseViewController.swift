@@ -9,8 +9,7 @@ import UIKit
 
 final class ChooseViewController: UIViewController {
     private let presenter: IChoosePresenter
-    private let dataSource: IChooseDataSource
-    private lazy var componentsView = ChooseView(delegate: self, dataSource: dataSource)
+    private lazy var componentsView = ChooseView(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +18,8 @@ final class ChooseViewController: UIViewController {
         presenter.viewLoaded(ui: self)
     }
     
-    init(presenter: IChoosePresenter, dataSource: ChooseTableViewDataSource) {
+    init(presenter: IChoosePresenter) {
         self.presenter = presenter
-        self.dataSource = dataSource
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,11 +43,12 @@ extension ChooseViewController: ChooseTableViewDelegate {
 }
 
 extension ChooseViewController: IChooseView {
-    func updateTableView(model: [CarMarkModel]) {
-        dataSource.set(model: model)
-    }
     
     func toDetailViewController(viewController: DetailsViewController) {
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func setupDataSource(dataSource: IChooseDataSource) {
+        componentsView.setupDataSource(dataSource: dataSource)
     }
 }

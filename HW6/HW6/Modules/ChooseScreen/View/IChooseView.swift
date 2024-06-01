@@ -8,6 +8,6 @@
 import Foundation
 
 protocol IChooseView: AnyObject {
-    func updateTableView(model: [CarMarkModel])
     func toDetailViewController(viewController: DetailsViewController)
+    func setupDataSource(dataSource: IChooseDataSource)
 }
