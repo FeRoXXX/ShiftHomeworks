@@ -47,11 +47,11 @@ private extension HomeViewController {
     func dataRequest() {
         let data = dishesDataRepository.getData()
         var convertData: [HomeViewModel] = []
-        _ = data.map {
-            convertData.append(.init(dishImage: $0.dishImage,
-                                     dishName: $0.dishName,
-                                     cookingTime: $0.cookingTime,
-                                     cookingTimeImage: $0.cookingTimeImage))
+        convertData = data.map {
+            .init(dishImage: $0.dishImage, 
+                  dishName: $0.dishName,
+                  cookingTime: $0.cookingTime,
+                  cookingTimeImage: $0.cookingTimeImage)
         }
         dataSource.data = convertData
     }
