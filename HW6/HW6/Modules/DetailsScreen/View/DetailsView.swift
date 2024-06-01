@@ -71,9 +71,8 @@ final class DetailsView: UIView {
         return button
     }()
     
-    init(delegate: DetailsTableViewDelegate, dataSource: IDetailsTableViewDataSource) {
+    init(delegate: DetailsTableViewDelegate) {
         bodyTypeTableView.delegate = delegate
-        bodyTypeTableView.dataSource = dataSource
         super.init(frame: .zero)
         setupUI()
     }
@@ -89,7 +88,6 @@ private extension DetailsView {
         backgroundColor = Colors.backgroundColor
         addSubviews()
         setupConstraints()
-        startIndicator()
     }
     
     func addSubviews() {
@@ -138,5 +136,9 @@ extension DetailsView {
     
     func setupPrice(model: String) {
         priceLabel.text = model
+    }
+    
+    func setupDataSource(dataSource: IDetailsTableViewDataSource) {
+        bodyTypeTableView.dataSource = dataSource
     }
 }

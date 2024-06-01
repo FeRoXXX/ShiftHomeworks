@@ -8,8 +8,7 @@
 import UIKit
 
 final class DetailsViewController: UIViewController {
-    private lazy var detailsView: DetailsView = DetailsView(delegate: self, dataSource: dataSource)
-    private let dataSource: IDetailsTableViewDataSource
+    private lazy var detailsView: DetailsView = DetailsView(delegate: self)
     private let presenter: IDetailsPresenter
 
     override func viewDidLoad() {
@@ -19,8 +18,7 @@ final class DetailsViewController: UIViewController {
         presenter.loadView(ui: self)
     }
     
-    init(presenter: IDetailsPresenter, dataSource: IDetailsTableViewDataSource) {
-        self.dataSource = dataSource
+    init(presenter: IDetailsPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -50,10 +48,20 @@ extension DetailsViewController: DetailsTableViewDelegate {
 }
 
 extension DetailsViewController: IDetailsView {
-    func updateTable(model: [CarTypeWithSelectModel]) {
-        dataSource.setup(data: model)
+    func updateTable() {
         detailsView.reloadData()
+    }
+    
+    func stopIndicator() {
         detailsView.stopIndicator()
+    }
+    
+    func startIndicator() {
+        detailsView.startIndicator()
+    }
+    
+    func setupDataSource(dataSource: IDetailsTableViewDataSource) {
+        detailsView.setupDataSource(dataSource: dataSource)
     }
     
     func updateCarImage(model: String) {

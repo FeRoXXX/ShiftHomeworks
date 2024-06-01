@@ -10,11 +10,13 @@ import Foundation
 final class DetailsPresenter {
     private weak var ui: IDetailsView?
     private var requestData: CarMarkModel
+    private var dataSource: IDetailsTableViewDataSource
     private var carTypeDataArray: [CarTypeWithSelectModel] = []
     private var carTypeDetails: [CarTypeDetailsModel] = []
     
-    init(requestData: CarMarkModel) {
+    init(requestData: CarMarkModel, dataSource: IDetailsTableViewDataSource) {
         self.requestData = requestData
+        self.dataSource = dataSource
     }
 }
 
@@ -22,7 +24,9 @@ extension DetailsPresenter: IDetailsPresenter {
     
     func loadView(ui: any IDetailsView) {
         self.ui = ui
+        ui.setupDataSource(dataSource: dataSource)
         
+        ui.startIndicator()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) { [weak self] in
             guard let self = self else {
                 return
@@ -37,12 +41,13 @@ extension DetailsPresenter: IDetailsPresenter {
                     self.carTypeDataArray.append(CarTypeWithSelectModel(id: element.id, type: element.carType, isSelected: false))
                 }
             }
-            
-            ui.updateTable(model: carTypeDataArray)
+            dataSource.setup(data: carTypeDataArray)
+            ui.updateTable()
             if let currentCarDetail = carTypeDetails.first(where: { $0.id == currentID }) {
                 ui.updateCarImage(model: currentCarDetail.imageName)
                 ui.updateCarPrice(model: currentCarDetail.carPrice)
             }
+            ui.stopIndicator()
         }
     }
     
@@ -61,7 +66,8 @@ extension DetailsPresenter: IDetailsPresenter {
                 currentID = self.carTypeDataArray[indexElement].id
             }
         }
-        ui?.updateTable(model: carTypeDataArray)
+        dataSource.setup(data: carTypeDataArray)
+        ui?.updateTable()
         if let currentCarDetail = carTypeDetails.first(where: { $0.id == currentID }) {
             ui?.updateCarImage(model: currentCarDetail.imageName)
         }

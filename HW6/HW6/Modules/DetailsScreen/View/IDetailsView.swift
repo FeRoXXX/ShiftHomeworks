@@ -6,7 +6,10 @@
 //
 
 protocol IDetailsView: AnyObject {
-    func updateTable(model: [CarTypeWithSelectModel])
+    func updateTable()
     func updateCarPrice(model: String)
     func updateCarImage(model: String)
+    func stopIndicator()
+    func startIndicator()
+    func setupDataSource(dataSource: IDetailsTableViewDataSource)
 }

@@ -7,9 +7,9 @@
 
 final class DetailsAssembly {
     static func build(data: CarMarkModel) -> DetailsViewController {
-        let presenter = DetailsPresenter(requestData: data)
         let dataSource = DetailsTableViewDataSource()
-        let viewController = DetailsViewController(presenter: presenter, dataSource: dataSource)
+        let presenter = DetailsPresenter(requestData: data, dataSource: dataSource)
+        let viewController = DetailsViewController(presenter: presenter)
         return viewController
     }
 }
