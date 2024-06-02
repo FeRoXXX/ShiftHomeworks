@@ -25,13 +25,12 @@ extension NetworkService {
             let queryParameters = parameters.map {
                 URLQueryItem(name: $0.key, value: ($0.value as! String))
             }
-            
             baseComponent?.queryItems = queryParameters
             
             guard let baseComponentURL = baseComponent?.url else {
                 return nil
             }
-
+            
             return URLRequest(url: baseComponentURL)
         case .getImageRequest(let url):
             let baseComponent = URLComponents(string: url)
@@ -39,14 +38,14 @@ extension NetworkService {
             guard let baseComponentURL = baseComponent?.url else {
                 return nil
             }
-
+            
             return URLRequest(url: baseComponentURL)
         }
     }
     
     func fetch(completion: @escaping (Result<Data, Error>) -> Void) {
         guard let request = makeRequest() else {
-            fatalError() //TODO: make error
+            fatalError(Errors.badURL.rawValue) //TODO: make error
         }
         
         let task = urlSession.dataTask(with: request) { data, response, error in
@@ -59,11 +58,11 @@ extension NetworkService {
                 case 200...299:
                     completion(.success(data))
                 case 300...399:
-                    fatalError()
+                    completion(.failure(RequestErrors.newDomain))
                 case 400...499:
-                    fatalError()
+                    completion(.failure(RequestErrors.clientError))
                 case 500...599:
-                    fatalError()
+                    completion(.failure(RequestErrors.serverError))
                 default:
                     break
                 }

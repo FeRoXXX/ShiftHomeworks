@@ -8,4 +8,5 @@
 protocol IListOfImageView: AnyObject {
     func setupDataSource(dataSource: IListOfImageDataSource)
     func updateTable()
+    func showError(error: String)
 }

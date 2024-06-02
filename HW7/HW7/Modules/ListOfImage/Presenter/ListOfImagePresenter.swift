@@ -25,7 +25,11 @@ extension ListOfImagePresenter: IListOfImagePresenter {
         ui.setupDataSource(dataSource: dataSource)
     }
     
-    func findImageFrom(text: String) {
+    func findImageFrom(text: String?) {
+        guard let text else {
+            ui?.showError(error: Errors.errorInput.rawValue)
+            return
+        }
         dataRepository.getData(parameters: ["s": text]) { [weak self] result in
             switch result {
             case .success(let data):
@@ -34,7 +38,9 @@ extension ListOfImagePresenter: IListOfImagePresenter {
                     self?.ui?.updateTable()
                 }
             case .failure(let failure):
-                print(failure) //TODO: make alert
+                DispatchQueue.main.async {
+                    self?.ui?.showError(error: failure.localizedDescription)
+                }
             }
         }
     }

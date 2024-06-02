@@ -51,4 +51,8 @@ extension ListOfImageViewController: ListOfImageDelegate, IListOfImageView {
     func updateTable() {
         componentView.updateTable()
     }
+    
+    func showError(error: String) {
+        componentView.showError(error: error)
+    }
 }

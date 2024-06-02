@@ -9,7 +9,7 @@ import UIKit
 
 class ListOfImageView: UIView {
     
-    var findImage: ((String) -> Void)?
+    var findImage: ((String?) -> Void)?
     
     private lazy var textFieldStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [helpLabel, urlTextField, findButton])
@@ -102,9 +102,11 @@ extension ListOfImageView {
         listOfImageTableView.reloadData()
     }
     
+    func showError(error: String) {
+        urlTextField.text = error
+    }
+    
     @objc func findButtonClicked() {
-        if let text = urlTextField.text {
-            findImage?(text)
-        }
+        findImage?(urlTextField.text)
     }
 }

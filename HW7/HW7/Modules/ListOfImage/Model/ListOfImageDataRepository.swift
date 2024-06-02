@@ -20,15 +20,15 @@ class ListOfImageDataRepository {
                             case .success(let success):
                                 completion(.success(success))
                             case .failure(let failure):
-                                print(failure)
+                                completion(.failure(failure))
                             }
                         }
                     }
                 } catch {
-                    print("error")
+                    completion(.failure(RequestErrors.emptyData))
                 }
             case .failure(let failure):
-                print(failure)
+                completion(.failure(failure))
             }
         })
     }

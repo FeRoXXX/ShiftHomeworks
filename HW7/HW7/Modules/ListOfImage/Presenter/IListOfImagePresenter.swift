@@ -9,5 +9,5 @@ import Foundation
 
 protocol IListOfImagePresenter {
     func viewLoaded(ui: IListOfImageView)
-    func findImageFrom(text: String)
+    func findImageFrom(text: String?)
 }

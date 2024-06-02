@@ -21,7 +21,7 @@ class ListOfImageDataSource: NSObject {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListOfImageTableViewCell.identifier, for: indexPath) as? ListOfImageTableViewCell else {
-            return UITableViewCell() //TODO: MAKE error
+            return UITableViewCell()
         }
         cell.setupData(model: data[indexPath.row])
         return cell
@@ -33,7 +33,7 @@ extension ListOfImageDataSource: IListOfImageDataSource {
         if let image = UIImage(data: model.encodedImage) {
             data.append(image)
         } else {
-            print("Error image doesn't exist")
+            print(Errors.decodeError.rawValue)
         }
     }
 }

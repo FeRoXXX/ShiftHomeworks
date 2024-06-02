@@ -25,6 +25,7 @@
 		275160C32C0CB51F008103F2 /* MealImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C22C0CB51F008103F2 /* MealImageModel.swift */; };
 		275160C62C0CB559008103F2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C52C0CB559008103F2 /* NetworkService.swift */; };
 		275160C92C0CB59A008103F2 /* ListOfImageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */; };
+		275160CC2C0CD903008103F2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160CB2C0CD903008103F2 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		275160C22C0CB51F008103F2 /* MealImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImageModel.swift; sourceTree = "<group>"; };
 		275160C52C0CB559008103F2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageAssembly.swift; sourceTree = "<group>"; };
+		275160CB2C0CD903008103F2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		2751608D2C0CA573008103F2 /* HW7 */ = {
 			isa = PBXGroup;
 			children = (
+				275160CA2C0CD8F3008103F2 /* Constants */,
 				275160C42C0CB533008103F2 /* NetworkService */,
 				275160A52C0CA886008103F2 /* Modules */,
 				275160A42C0CA881008103F2 /* Base */,
@@ -191,6 +194,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		275160CA2C0CD8F3008103F2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				275160CB2C0CD903008103F2 /* Errors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -274,6 +285,7 @@
 				275160BB2C0CB4B3008103F2 /* ListOfImagePresenter.swift in Sources */,
 				275160C62C0CB559008103F2 /* NetworkService.swift in Sources */,
 				275160BD2C0CB4C2008103F2 /* IListOfImagePresenter.swift in Sources */,
+				275160CC2C0CD903008103F2 /* Errors.swift in Sources */,
 				275160B02C0CB09F008103F2 /* IListOfImageView.swift in Sources */,
 				275160C32C0CB51F008103F2 /* MealImageModel.swift in Sources */,
 				275160B52C0CB14B008103F2 /* ListOfImageTableViewDelegate.swift in Sources */,
