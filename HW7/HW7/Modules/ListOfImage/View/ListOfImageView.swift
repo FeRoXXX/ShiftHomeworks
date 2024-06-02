@@ -51,10 +51,12 @@ class ListOfImageView: UIView {
     private let listOfImageTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(ListOfImageTableViewCell.self, forCellReuseIdentifier: ListOfImageTableViewCell.identifier)
         return tableView
     }()
     
-    init() {
+    init(delegate: ListOfImageDelegate) {
+        listOfImageTableView.delegate = delegate
         super.init(frame: .zero)
         setupUI()
     }
@@ -92,6 +94,9 @@ private extension ListOfImageView {
 }
 
 extension ListOfImageView {
+    func setupDataSource(dataSource: IListOfImageDataSource) {
+        listOfImageTableView.dataSource = dataSource
+    }
     
     func updateTable() {
         listOfImageTableView.reloadData()

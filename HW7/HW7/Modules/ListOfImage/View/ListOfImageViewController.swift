@@ -9,15 +9,18 @@ import UIKit
 
 class ListOfImageViewController: UIViewController {
     
-    private lazy var componentView = ListOfImageView()
+    private lazy var componentView = ListOfImageView(delegate: self)
+    private let presenter: IListOfImagePresenter
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupClousure()
+        presenter.viewLoaded(ui: self)
     }
     
-    init() {
+    init(presenter: IListOfImagePresenter) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,9 +38,17 @@ private extension ListOfImageViewController {
     
     func setupClousure() {
         componentView.findImage = { [weak self] text in
-            
+            self?.presenter.findImageFrom(text: text)
         }
     }
 }
 
-
+extension ListOfImageViewController: ListOfImageDelegate, IListOfImageView {
+    func setupDataSource(dataSource: IListOfImageDataSource) {
+        componentView.setupDataSource(dataSource: dataSource)
+    }
+    
+    func updateTable() {
+        componentView.updateTable()
+    }
+}
