@@ -13,6 +13,18 @@
 		2751609B2C0CA575008103F2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2751609A2C0CA575008103F2 /* Base */; };
 		275160AC2C0CA94A008103F2 /* ListOfImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160AB2C0CA94A008103F2 /* ListOfImageViewController.swift */; };
 		275160AE2C0CAFBA008103F2 /* ListOfImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160AD2C0CAFBA008103F2 /* ListOfImageView.swift */; };
+		275160B02C0CB09F008103F2 /* IListOfImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160AF2C0CB09F008103F2 /* IListOfImageView.swift */; };
+		275160B22C0CB0F9008103F2 /* ListOfImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160B12C0CB0F9008103F2 /* ListOfImageTableViewCell.swift */; };
+		275160B52C0CB14B008103F2 /* ListOfImageTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160B42C0CB14B008103F2 /* ListOfImageTableViewDelegate.swift */; };
+		275160B72C0CB15F008103F2 /* ListOfImageTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160B62C0CB15F008103F2 /* ListOfImageTableViewDataSource.swift */; };
+		275160B92C0CB478008103F2 /* ReceivedImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160B82C0CB478008103F2 /* ReceivedImageModel.swift */; };
+		275160BB2C0CB4B3008103F2 /* ListOfImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160BA2C0CB4B3008103F2 /* ListOfImagePresenter.swift */; };
+		275160BD2C0CB4C2008103F2 /* IListOfImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160BC2C0CB4C2008103F2 /* IListOfImagePresenter.swift */; };
+		275160BF2C0CB4F9008103F2 /* ListOfImageDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160BE2C0CB4F9008103F2 /* ListOfImageDataRepository.swift */; };
+		275160C12C0CB50B008103F2 /* MealsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C02C0CB50B008103F2 /* MealsResponseModel.swift */; };
+		275160C32C0CB51F008103F2 /* MealImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C22C0CB51F008103F2 /* MealImageModel.swift */; };
+		275160C62C0CB559008103F2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C52C0CB559008103F2 /* NetworkService.swift */; };
+		275160C92C0CB59A008103F2 /* ListOfImageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		2751609C2C0CA575008103F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		275160AB2C0CA94A008103F2 /* ListOfImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageViewController.swift; sourceTree = "<group>"; };
 		275160AD2C0CAFBA008103F2 /* ListOfImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageView.swift; sourceTree = "<group>"; };
+		275160AF2C0CB09F008103F2 /* IListOfImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListOfImageView.swift; sourceTree = "<group>"; };
+		275160B12C0CB0F9008103F2 /* ListOfImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageTableViewCell.swift; sourceTree = "<group>"; };
+		275160B42C0CB14B008103F2 /* ListOfImageTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageTableViewDelegate.swift; sourceTree = "<group>"; };
+		275160B62C0CB15F008103F2 /* ListOfImageTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageTableViewDataSource.swift; sourceTree = "<group>"; };
+		275160B82C0CB478008103F2 /* ReceivedImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedImageModel.swift; sourceTree = "<group>"; };
+		275160BA2C0CB4B3008103F2 /* ListOfImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImagePresenter.swift; sourceTree = "<group>"; };
+		275160BC2C0CB4C2008103F2 /* IListOfImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListOfImagePresenter.swift; sourceTree = "<group>"; };
+		275160BE2C0CB4F9008103F2 /* ListOfImageDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageDataRepository.swift; sourceTree = "<group>"; };
+		275160C02C0CB50B008103F2 /* MealsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsResponseModel.swift; sourceTree = "<group>"; };
+		275160C22C0CB51F008103F2 /* MealImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImageModel.swift; sourceTree = "<group>"; };
+		275160C52C0CB559008103F2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 		2751608D2C0CA573008103F2 /* HW7 */ = {
 			isa = PBXGroup;
 			children = (
+				275160C42C0CB533008103F2 /* NetworkService */,
 				275160A52C0CA886008103F2 /* Modules */,
 				275160A42C0CA881008103F2 /* Base */,
 				275160A32C0CA87C008103F2 /* Recources */,
@@ -101,6 +126,8 @@
 		275160A72C0CA919008103F2 /* ListOfImage */ = {
 			isa = PBXGroup;
 			children = (
+				275160C72C0CB58B008103F2 /* Assembly */,
+				275160B32C0CB12E008103F2 /* Support */,
 				275160AA2C0CA93B008103F2 /* Model */,
 				275160A92C0CA92D008103F2 /* Presenter */,
 				275160A82C0CA928008103F2 /* View */,
@@ -113,6 +140,8 @@
 			children = (
 				275160AB2C0CA94A008103F2 /* ListOfImageViewController.swift */,
 				275160AD2C0CAFBA008103F2 /* ListOfImageView.swift */,
+				275160AF2C0CB09F008103F2 /* IListOfImageView.swift */,
+				275160B12C0CB0F9008103F2 /* ListOfImageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +149,9 @@
 		275160A92C0CA92D008103F2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				275160B82C0CB478008103F2 /* ReceivedImageModel.swift */,
+				275160BA2C0CB4B3008103F2 /* ListOfImagePresenter.swift */,
+				275160BC2C0CB4C2008103F2 /* IListOfImagePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -127,8 +159,36 @@
 		275160AA2C0CA93B008103F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				275160BE2C0CB4F9008103F2 /* ListOfImageDataRepository.swift */,
+				275160C02C0CB50B008103F2 /* MealsResponseModel.swift */,
+				275160C22C0CB51F008103F2 /* MealImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		275160B32C0CB12E008103F2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				275160B42C0CB14B008103F2 /* ListOfImageTableViewDelegate.swift */,
+				275160B62C0CB15F008103F2 /* ListOfImageTableViewDataSource.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		275160C42C0CB533008103F2 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				275160C52C0CB559008103F2 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		275160C72C0CB58B008103F2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +261,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275160C12C0CB50B008103F2 /* MealsResponseModel.swift in Sources */,
+				275160BF2C0CB4F9008103F2 /* ListOfImageDataRepository.swift in Sources */,
+				275160B92C0CB478008103F2 /* ReceivedImageModel.swift in Sources */,
+				275160B22C0CB0F9008103F2 /* ListOfImageTableViewCell.swift in Sources */,
+				275160B72C0CB15F008103F2 /* ListOfImageTableViewDataSource.swift in Sources */,
 				275160AC2C0CA94A008103F2 /* ListOfImageViewController.swift in Sources */,
 				2751608F2C0CA573008103F2 /* AppDelegate.swift in Sources */,
 				275160912C0CA573008103F2 /* SceneDelegate.swift in Sources */,
+				275160C92C0CB59A008103F2 /* ListOfImageAssembly.swift in Sources */,
 				275160AE2C0CAFBA008103F2 /* ListOfImageView.swift in Sources */,
+				275160BB2C0CB4B3008103F2 /* ListOfImagePresenter.swift in Sources */,
+				275160C62C0CB559008103F2 /* NetworkService.swift in Sources */,
+				275160BD2C0CB4C2008103F2 /* IListOfImagePresenter.swift in Sources */,
+				275160B02C0CB09F008103F2 /* IListOfImageView.swift in Sources */,
+				275160C32C0CB51F008103F2 /* MealImageModel.swift in Sources */,
+				275160B52C0CB14B008103F2 /* ListOfImageTableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
