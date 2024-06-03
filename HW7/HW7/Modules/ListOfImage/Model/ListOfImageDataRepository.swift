@@ -15,7 +15,8 @@ class ListOfImageDataRepository {
                 do {
                     let mealData = try JSONDecoder().decode(MealsResponseModel.self, from: success)
                     mealData.meals.forEach {
-                        NetworkService.getImageRequest(url: $0.strMealThumb).fetch { result in
+                        let previewUrl = $0.strMealThumb + "/preview"
+                        NetworkService.getImageRequest(url: previewUrl).fetch { result in
                             switch result {
                             case .success(let success):
                                 completion(.success(success))

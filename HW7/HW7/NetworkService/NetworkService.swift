@@ -6,13 +6,26 @@
 //
 
 import Foundation
+import UIKit
 
 enum NetworkService {
     case getURLRequest(parameters: [String: Any])
     case getImageRequest(url: String)
     
+    private var sessionID: String {
+        switch self {
+        case .getURLRequest(_):
+            return "1"
+        case .getImageRequest(_):
+            return "2"
+        }
+    }
+    
     private var urlSession: URLSession {
-        return URLSession.shared
+        let configuration = URLSessionConfiguration.background(withIdentifier: sessionID)
+        configuration.isDiscretionary = true
+        configuration.sessionSendsLaunchEvents = true
+        return URLSession(configuration: configuration, delegate: URLSessionDelegateImplement.shared, delegateQueue: nil)
     }
 }
 
@@ -45,30 +58,60 @@ extension NetworkService {
     
     func fetch(completion: @escaping (Result<Data, Error>) -> Void) {
         guard let request = makeRequest() else {
-            fatalError(Errors.badURL.rawValue) //TODO: make error
+            fatalError(Errors.badURL.rawValue)
         }
         
-        let task = urlSession.dataTask(with: request) { data, response, error in
-            if let error {
-                completion(.failure(error))
-            } else if let httpResponse = response as? HTTPURLResponse,
-                      let data {
-                let statusCode = httpResponse.statusCode
-                switch statusCode {
-                case 200...299:
-                    completion(.success(data))
-                case 300...399:
-                    completion(.failure(RequestErrors.newDomain))
-                case 400...499:
-                    completion(.failure(RequestErrors.clientError))
-                case 500...599:
-                    completion(.failure(RequestErrors.serverError))
-                default:
-                    break
-                }
+        let task = urlSession.dataTask(with: request)
+        task.taskDescription = UUID().uuidString
+        URLSessionDelegateImplement.shared.setCompletionHandler(for: task, handler: completion)
+        task.resume()
+    }
+}
+
+class URLSessionDelegateImplement: NSObject, URLSessionDelegate, URLSessionTaskDelegate, URLSessionDataDelegate {
+    static let shared = URLSessionDelegateImplement()
+    
+    var completionHandlers: [String: (Result<Data, Error>) -> Void] = [:]
+    var receivedData: [String: Data] = [:]
+
+    func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {}
+    
+    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+        DispatchQueue.main.async {
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate, let completionHandler = appDelegate.backgroundCompletion {
+                appDelegate.backgroundCompletion = nil
+                completionHandler()
             }
         }
-        task.resume()
+    }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        let taskDescription = task.taskDescription ?? ""
+        if let error = error {
+            if let completionHandler = completionHandlers[taskDescription] {
+                completionHandler(.failure(error))
+                completionHandlers.removeValue(forKey: taskDescription)
+            }
+        } else if let data = receivedData[taskDescription] {
+            if let completionHandler = completionHandlers[taskDescription] {
+                completionHandler(.success(data))
+                completionHandlers.removeValue(forKey: taskDescription)
+                receivedData.removeValue(forKey: taskDescription)
+            }
+        }
+        receivedData.removeValue(forKey: taskDescription)
+    }
+    
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        let taskDescription = dataTask.taskDescription ?? ""
+        if receivedData[taskDescription] == nil {
+            receivedData[taskDescription] = Data()
+        }
+        receivedData[taskDescription]?.append(data)
+    }
+    
+    func setCompletionHandler(for task: URLSessionTask, handler: @escaping (Result<Data, Error>) -> Void) {
+        completionHandlers[task.taskDescription ?? ""] = handler
     }
 }
 
