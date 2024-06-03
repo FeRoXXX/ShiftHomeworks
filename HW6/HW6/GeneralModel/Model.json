@@ -1,0 +1,147 @@
+[
+    {
+        "markName": "BMW",
+        "carDetail": [
+            {
+                "id": "1",
+                "imageName": "bmw_sedan",
+                "carPrice": "50000$",
+                "carType": "Седан"
+            },
+            {
+                "id": "2",
+                "imageName": "bmw_wagon",
+                "carPrice": "55000$",
+                "carType": "Фургон"
+            },
+            {
+                "id": "3",
+                "imageName": "bmw_crossover",
+                "carPrice": "60000$",
+                "carType": "Кроссовер"
+            },
+            {
+                "id": "4",
+                "imageName": "bmw_universal",
+                "carPrice": "58000$",
+                "carType": "Универсал"
+            }
+        ]
+    },
+    {
+        "markName": "Audi",
+        "carDetail": [
+            {
+                "id": "1",
+                "imageName": "audi_sedan",
+                "carPrice": "52000$",
+                "carType": "Седан"
+            },
+            {
+                "id": "2",
+                "imageName": "audi_wagon",
+                "carPrice": "56000$",
+                "carType": "Фургон"
+            },
+            {
+                "id": "3",
+                "imageName": "audi_crossover",
+                "carPrice": "61000$",
+                "carType": "Кроссовер"
+            },
+            {
+                "id": "4",
+                "imageName": "audi_universal",
+                "carPrice": "59000$",
+                "carType": "Универсал"
+            }
+        ]
+    },
+    {
+        "markName": "Ford",
+        "carDetail": [
+            {
+                "id": "1",
+                "imageName": "ford_sedan",
+                "carPrice": "48000$",
+                "carType": "Седан"
+            },
+            {
+                "id": "2",
+                "imageName": "ford_wagon",
+                "carPrice": "53000$",
+                "carType": "Фургон"
+            },
+            {
+                "id": "3",
+                "imageName": "ford_crossover",
+                "carPrice": "57000$",
+                "carType": "Кроссовер"
+            },
+            {
+                "id": "4",
+                "imageName": "ford_universal",
+                "carPrice": "54000$",
+                "carType": "Универсал"
+            }
+        ]
+    },
+    {
+        "markName": "Honda",
+        "carDetail": [
+            {
+                "id": "1",
+                "imageName": "honda_sedan",
+                "carPrice": "47000$",
+                "carType": "Седан"
+            },
+            {
+                "id": "2",
+                "imageName": "honda_wagon",
+                "carPrice": "52000$",
+                "carType": "Фургон"
+            },
+            {
+                "id": "3",
+                "imageName": "honda_crossover",
+                "carPrice": "56000$",
+                "carType": "Кроссовер"
+            },
+            {
+                "id": "4",
+                "imageName": "honda_universal",
+                "carPrice": "53000$",
+                "carType": "Универсал"
+            }
+        ]
+    },
+    {
+        "markName": "Toyota",
+        "carDetail": [
+            {
+                "id": "1",
+                "imageName": "toyota_sedan",
+                "carPrice": "49000$",
+                "carType": "Седан"
+            },
+            {
+                "id": "2",
+                "imageName": "toyota_wagon",
+                "carPrice": "54000$",
+                "carType": "Фургон"
+            },
+            {
+                "id": "3",
+                "imageName": "toyota_crossover",
+                "carPrice": "58000$",
+                "carType": "Кроссовер"
+            },
+            {
+                "id": "4",
+                "imageName": "toyota_universal",
+                "carPrice": "55000$",
+                "carType": "Универсал"
+            }
+        ]
+    }
+]
