@@ -8,9 +8,22 @@
 import Foundation
 
 enum Errors: String {
-    case errorInput = "Error in the entered data"
-    case decodeError = "Decode error"
-    case badURL = "Bad url"
+    case errorInput
+    case decodeError
+    case badURL
+}
+
+extension Errors {
+    public var errorDescription: NSError {
+        switch self {
+        case .badURL:
+            return NSError(domain: "Bad url", code: 1)
+        case .decodeError:
+            return NSError(domain: "Decode error", code: 2)
+        case .errorInput:
+            return NSError(domain: "Error in the entered data", code: 3)
+        }
+    }
 }
 
 enum RequestErrors: Error {
@@ -20,17 +33,17 @@ enum RequestErrors: Error {
     case emptyData
 }
 
-extension RequestErrors: LocalizedError {
+extension RequestErrors {
     public var errorDescription: String? {
         switch self {
         case .serverError:
-            return NSLocalizedString("Server error", comment: "")
+            return "Server error"
         case .clientError:
-            return NSLocalizedString("Client error", comment: "")
+            return "Client error"
         case .newDomain:
-            return NSLocalizedString("New domain", comment: "")
+            return "New domain"
         case .emptyData:
-            return NSLocalizedString("The dish was not found", comment: "")
+            return "The dish was not found"
         }
     }
 }
