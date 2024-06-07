@@ -26,6 +26,7 @@
 		275160C62C0CB559008103F2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C52C0CB559008103F2 /* NetworkService.swift */; };
 		275160C92C0CB59A008103F2 /* ListOfImageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */; };
 		275160CC2C0CD903008103F2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275160CB2C0CD903008103F2 /* Errors.swift */; };
+		27B5F80C2C137ABB00E91AB6 /* BackgroundSessionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5F80B2C137ABB00E91AB6 /* BackgroundSessionConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		275160C52C0CB559008103F2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		275160C82C0CB59A008103F2 /* ListOfImageAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImageAssembly.swift; sourceTree = "<group>"; };
 		275160CB2C0CD903008103F2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		27B5F80B2C137ABB00E91AB6 /* BackgroundSessionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSessionConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				275160C52C0CB559008103F2 /* NetworkService.swift */,
+				27B5F80B2C137ABB00E91AB6 /* BackgroundSessionConfigurator.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				275160B72C0CB15F008103F2 /* ListOfImageTableViewDataSource.swift in Sources */,
 				275160AC2C0CA94A008103F2 /* ListOfImageViewController.swift in Sources */,
 				2751608F2C0CA573008103F2 /* AppDelegate.swift in Sources */,
+				27B5F80C2C137ABB00E91AB6 /* BackgroundSessionConfigurator.swift in Sources */,
 				275160912C0CA573008103F2 /* SceneDelegate.swift in Sources */,
 				275160C92C0CB59A008103F2 /* ListOfImageAssembly.swift in Sources */,
 				275160AE2C0CAFBA008103F2 /* ListOfImageView.swift in Sources */,
