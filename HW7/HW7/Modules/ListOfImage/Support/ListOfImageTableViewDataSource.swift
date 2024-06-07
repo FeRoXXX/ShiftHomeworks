@@ -32,8 +32,6 @@ extension ListOfImageDataSource: IListOfImageDataSource {
     func setupData(model: ReceivedImageModel) {
         if let image = UIImage(data: model.encodedImage) {
             data.append(image)
-        } else {
-            print(Errors.decodeError.rawValue)
         }
     }
 }
