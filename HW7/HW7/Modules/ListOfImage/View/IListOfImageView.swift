@@ -6,7 +6,7 @@
 //
 
 protocol IListOfImageView: AnyObject {
-    func setupDataSource(dataSource: IListOfImageDataSource)
+    func setupDataSource(_ dataSource: IListOfImageDataSource)
     func updateTable()
     func showError(error: String)
 }

@@ -51,6 +51,7 @@ class ListOfImageView: UIView {
     private let listOfImageTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.allowsSelection = false
         tableView.register(ListOfImageTableViewCell.self, forCellReuseIdentifier: ListOfImageTableViewCell.identifier)
         return tableView
     }()
