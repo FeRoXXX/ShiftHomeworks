@@ -22,7 +22,7 @@ extension ListOfImagePresenter: IListOfImagePresenter {
     func viewLoaded(ui: any IListOfImageView) {
         self.ui = ui
         
-        ui.setupDataSource(dataSource: dataSource)
+        ui.setupDataSource(dataSource)
     }
     
     func findImageFrom(text: String?) {
@@ -30,7 +30,7 @@ extension ListOfImagePresenter: IListOfImagePresenter {
             ui?.showError(error: Errors.errorInput.rawValue)
             return
         }
-        dataRepository.getData(parameters: ["s": text]) { [weak self] result in
+        dataRepository.getData(text: text) { [weak self] result in
             switch result {
             case .success(let data):
                 self?.dataSource.setupData(model: ReceivedImageModel(encodedImage: data))

@@ -8,7 +8,8 @@
 import Foundation
 
 class ListOfImageDataRepository {
-    func getData(parameters: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
+    func getData(text: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let parameters: [String: Any] = ["s": text]
         NetworkService.getURLRequest(parameters: parameters).fetch(completion: { result in
             switch result {
             case .success(let success):
